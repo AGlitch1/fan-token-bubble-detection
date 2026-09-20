@@ -1,0 +1,30 @@
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+
+# Local configuration and credentials
+.env
+.env.*
+
+# Node/Codex workbook tooling
+node_modules/
+
+# Large reproducible downloads and generated panels
+data/raw/yahoo/
+data/raw/coingecko/validation_*.json
+data/raw/raw_market_data.csv
+data/clean/*.csv
+
+# Generated workbook previews and diagnostic sidecars
+outputs/previews/
+outputs/*inspection*.txt
+outputs/formula_error_scan.txt
+
+# Operating-system and editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

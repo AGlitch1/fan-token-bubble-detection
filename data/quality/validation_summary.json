@@ -1,0 +1,11 @@
+{
+  "fan_token_count": 20,
+  "benchmark_count": 3,
+  "quality_pass_count": 20,
+  "quality_review_count": 0,
+  "median_coverage_ratio": 1.0,
+  "total_valid_fan_token_prices": 39282,
+  "total_extreme_return_flags": 3,
+  "cross_validation_pass_count": 4,
+  "cross_validation_review_count": 1
+}

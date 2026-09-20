@@ -1,0 +1,4 @@
+date_utc,asset_id,symbol,asset_name,prior_valid_close_usd,close_usd,return_pct,source,review_status,review_note
+2020-12-23,og-fan-token,OG,OG Fan Token,2.76230788230896,9.228279113769531,120.62060666930662,Yahoo Finance chart service,PENDING,
+2021-02-24,ac-milan-fan-token,ACM,AC Milan Fan Token,5.944447994232178,18.38566017150879,112.91133485417394,Yahoo Finance chart service,PENDING,
+2025-10-01,alpine-f1-team-fan-token,ALPINE,Alpine F1 Team Fan Token,6.615793228149414,1.7701929807662964,-131.83711346062407,Yahoo Finance chart service,PENDING,

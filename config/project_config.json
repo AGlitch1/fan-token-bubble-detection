@@ -1,0 +1,19 @@
+{
+  "study_title": "Bubble Detection and Dating in Fan Tokens",
+  "snapshot_date": "2026-09-20",
+  "start_date": "2019-01-01",
+  "cutoff_date": "2026-09-19",
+  "sample_size": 20,
+  "min_observations": 365,
+  "min_coverage_ratio": 0.8,
+  "outlier_abs_log_return_pct": 100.0,
+  "rolling_volatility_days": 30,
+  "rolling_volatility_min_observations": 20,
+  "annualization_days": 365,
+  "cross_validation_days": 360,
+  "run_cross_source_validation": true,
+  "http_timeout_seconds": 60,
+  "http_max_attempts": 5,
+  "request_delay_seconds": 0.35,
+  "coingecko_validation_delay_seconds": 1.6
+}

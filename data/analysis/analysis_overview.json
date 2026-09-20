@@ -1,0 +1,19 @@
+{
+  "study_title": "Bubble Detection and Dating in Fan Tokens",
+  "data_start_date": "2020-04-22",
+  "data_cutoff_date": "2026-09-19",
+  "fan_token_count": 20,
+  "benchmark_count": 3,
+  "fan_token_price_observations": 39282,
+  "fan_token_return_observations": 39262,
+  "median_coverage_ratio": 1.0,
+  "quality_pass_count": 20,
+  "extreme_return_flags": 3,
+  "top_five_chart_assets": [
+    "croatian-ff-fan-token",
+    "og-fan-token",
+    "atletico-madrid",
+    "santos-fc-fan-token",
+    "paris-saint-germain-fan-token"
+  ]
+}

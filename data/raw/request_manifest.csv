@@ -1,0 +1,30 @@
+asset_id,source,request_url,status,provider_symbol,timezone
+fan-token-category,CoinGecko,https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&category=fan-token&order=market_cap_desc&per_page=250&page=1&sparkline=false&locale=en,OK,,
+croatian-ff-fan-token,Yahoo Finance chart service,https://query1.finance.yahoo.com/v8/finance/chart/VATRENI-USD?period1=1546300800&period2=1789862400&interval=1d&events=history&includeAdjustedClose=true,OK,VATRENI-USD,UTC
+og-fan-token,Yahoo Finance chart service,https://query1.finance.yahoo.com/v8/finance/chart/OG-USD?period1=1546300800&period2=1789862400&interval=1d&events=history&includeAdjustedClose=true,OK,OG-USD,UTC
+atletico-madrid,Yahoo Finance chart service,https://query1.finance.yahoo.com/v8/finance/chart/ATM-USD?period1=1546300800&period2=1789862400&interval=1d&events=history&includeAdjustedClose=true,OK,ATM-USD,UTC
+santos-fc-fan-token,Yahoo Finance chart service,https://query1.finance.yahoo.com/v8/finance/chart/SANTOS-USD?period1=1546300800&period2=1789862400&interval=1d&events=history&includeAdjustedClose=true,OK,SANTOS-USD,UTC
+paris-saint-germain-fan-token,Yahoo Finance chart service,https://query1.finance.yahoo.com/v8/finance/chart/PSG-USD?period1=1546300800&period2=1789862400&interval=1d&events=history&includeAdjustedClose=true,OK,PSG-USD,UTC
+fc-barcelona-fan-token,Yahoo Finance chart service,https://query1.finance.yahoo.com/v8/finance/chart/BAR-USD?period1=1546300800&period2=1789862400&interval=1d&events=history&includeAdjustedClose=true,OK,BAR-USD,UTC
+as-roma-fan-token,Yahoo Finance chart service,https://query1.finance.yahoo.com/v8/finance/chart/ASR-USD?period1=1546300800&period2=1789862400&interval=1d&events=history&includeAdjustedClose=true,OK,ASR-USD,UTC
+galatasaray-fan-token,Yahoo Finance chart service,https://query1.finance.yahoo.com/v8/finance/chart/GAL-USD?period1=1546300800&period2=1789862400&interval=1d&events=history&includeAdjustedClose=true,OK,GAL-USD,UTC
+fc-porto,Yahoo Finance chart service,https://query1.finance.yahoo.com/v8/finance/chart/PORTO-USD?period1=1546300800&period2=1789862400&interval=1d&events=history&includeAdjustedClose=true,OK,PORTO-USD,UTC
+manchester-city-fan-token,Yahoo Finance chart service,https://query1.finance.yahoo.com/v8/finance/chart/CITY10049-USD?period1=1546300800&period2=1789862400&interval=1d&events=history&includeAdjustedClose=true,OK,CITY10049-USD,UTC
+lazio-fan-token,Yahoo Finance chart service,https://query1.finance.yahoo.com/v8/finance/chart/LAZIO-USD?period1=1546300800&period2=1789862400&interval=1d&events=history&includeAdjustedClose=true,OK,LAZIO-USD,UTC
+juventus-fan-token,Yahoo Finance chart service,https://query1.finance.yahoo.com/v8/finance/chart/JUV-USD?period1=1546300800&period2=1789862400&interval=1d&events=history&includeAdjustedClose=true,OK,JUV-USD,UTC
+ac-milan-fan-token,Yahoo Finance chart service,https://query1.finance.yahoo.com/v8/finance/chart/ACM8538-USD?period1=1546300800&period2=1789862400&interval=1d&events=history&includeAdjustedClose=true,OK,ACM8538-USD,UTC
+arsenal-fan-token,Yahoo Finance chart service,https://query1.finance.yahoo.com/v8/finance/chart/AFC11532-USD?period1=1546300800&period2=1789862400&interval=1d&events=history&includeAdjustedClose=true,OK,AFC11532-USD,UTC
+alpine-f1-team-fan-token,Yahoo Finance chart service,https://query1.finance.yahoo.com/v8/finance/chart/ALPINE-USD?period1=1546300800&period2=1789862400&interval=1d&events=history&includeAdjustedClose=true,OK,ALPINE-USD,UTC
+inter-milan-fan-token,Yahoo Finance chart service,https://query1.finance.yahoo.com/v8/finance/chart/INTER-USD?period1=1546300800&period2=1789862400&interval=1d&events=history&includeAdjustedClose=true,OK,INTER-USD,UTC
+trabzonspor-fan-token,Yahoo Finance chart service,https://query1.finance.yahoo.com/v8/finance/chart/TRA-USD?period1=1546300800&period2=1789862400&interval=1d&events=history&includeAdjustedClose=true,OK,TRA-USD,UTC
+argentine-football-association-fan-token,Yahoo Finance chart service,https://query1.finance.yahoo.com/v8/finance/chart/ARG-USD?period1=1546300800&period2=1789862400&interval=1d&events=history&includeAdjustedClose=true,OK,ARG-USD,UTC
+napoli-fan-token,Yahoo Finance chart service,https://query1.finance.yahoo.com/v8/finance/chart/NAP-USD?period1=1546300800&period2=1789862400&interval=1d&events=history&includeAdjustedClose=true,OK,NAP-USD,UTC
+portugal-national-team-fan-token,Yahoo Finance chart service,https://query1.finance.yahoo.com/v8/finance/chart/POR-USD?period1=1546300800&period2=1789862400&interval=1d&events=history&includeAdjustedClose=true,OK,POR-USD,UTC
+bitcoin,Yahoo Finance chart service,https://query1.finance.yahoo.com/v8/finance/chart/BTC-USD?period1=1546300800&period2=1789862400&interval=1d&events=history&includeAdjustedClose=true,OK,BTC-USD,UTC
+ethereum,Yahoo Finance chart service,https://query1.finance.yahoo.com/v8/finance/chart/ETH-USD?period1=1546300800&period2=1789862400&interval=1d&events=history&includeAdjustedClose=true,OK,ETH-USD,UTC
+chiliz,Yahoo Finance chart service,https://query1.finance.yahoo.com/v8/finance/chart/CHZ-USD?period1=1546300800&period2=1789862400&interval=1d&events=history&includeAdjustedClose=true,OK,CHZ-USD,UTC
+croatian-ff-fan-token,CoinGecko validation,https://api.coingecko.com/api/v3/coins/croatian-ff-fan-token/market_chart/range?vs_currency=usd&from=1758758400&to=1789862400,OK,,
+og-fan-token,CoinGecko validation,https://api.coingecko.com/api/v3/coins/og-fan-token/market_chart/range?vs_currency=usd&from=1758758400&to=1789862400,OK,,
+bitcoin,CoinGecko validation,https://api.coingecko.com/api/v3/coins/bitcoin/market_chart/range?vs_currency=usd&from=1758758400&to=1789862400,OK,,
+ethereum,CoinGecko validation,https://api.coingecko.com/api/v3/coins/ethereum/market_chart/range?vs_currency=usd&from=1758758400&to=1789862400,OK,,
+chiliz,CoinGecko validation,https://api.coingecko.com/api/v3/coins/chiliz/market_chart/range?vs_currency=usd&from=1758758400&to=1789862400,OK,,

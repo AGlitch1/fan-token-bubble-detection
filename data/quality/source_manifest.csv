@@ -1,0 +1,4 @@
+source,url,use
+CoinGecko fan-token category snapshot,https://api.coingecko.com/api/v3/coins/markets,Sample identification and market-cap snapshot
+Yahoo Finance chart service,https://query1.finance.yahoo.com/v8/finance/chart/,Full daily OHLC and reported volume history
+CoinGecko historical chart validation,https://api.coingecko.com/api/v3/coins/{id}/market_chart/range,Recent cross-source price validation

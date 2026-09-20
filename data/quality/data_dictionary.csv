@@ -1,0 +1,23 @@
+variable,type_or_unit,definition,origin
+date_utc,date,UTC calendar date,Source/derived
+asset_id,text,Stable CoinGecko asset identifier,Registry
+symbol,text,Display ticker; not used as the primary key,Registry
+asset_name,text,Asset name,Registry
+asset_type,category,fan_token or benchmark,Registry
+sample_rank,integer,Candidate rank at sample definition; blank for benchmarks,Registry
+open_usd,number,Provider-reported daily opening price in USD,Yahoo
+high_usd,number,Provider-reported daily high price in USD,Yahoo
+low_usd,number,Provider-reported daily low price in USD,Yahoo
+close_usd,number,Provider-reported daily closing price in USD,Yahoo
+adj_close_usd,number,Provider-reported adjusted close in USD,Yahoo
+volume_reported,number,Provider-reported volume; not assumed comparable in USD across assets,Yahoo
+log_price,number,Natural logarithm of positive closing price,Derived
+prior_valid_close_usd,number,Prior calendar day's valid closing price when a consecutive-day return can be calculated,Derived
+return_pct,percentage points,100 times the one-day difference in log price,Derived
+log_volume,number,Natural logarithm of one plus non-negative reported volume,Derived
+indexed_price_100,index,Closing price divided by first valid price times 100,Derived
+rolling_volatility_30d_pct_annualized,percentage points,Annualized standard deviation of daily log returns over 30 days,Derived
+gap_days_since_prior_valid,integer,Days since the prior valid closing-price observation,Derived
+missing_price_flag,boolean,True when no valid positive closing price exists,Derived
+zero_volume_flag,boolean,True when provider-reported volume equals zero,Derived
+extreme_return_flag,boolean,True when absolute daily log return exceeds the configured review threshold,Derived

@@ -1,0 +1,10 @@
+step,rule
+Preserve raw data,Raw JSON and CSV files are never overwritten.
+Time standard,All observations use UTC calendar dates.
+Duplicate handling,Exact token-date duplicates are flagged; the latest timestamp is retained for processing.
+Invalid prices,Non-positive prices are flagged and excluded from log transformations.
+Missing dates,A complete calendar is created from first valid observation to cutoff; prices are not forward-filled.
+Returns,Daily log returns are calculated only when both the current and previous calendar day have valid prices.
+Extreme returns,Absolute log returns above 100.0% are flagged but not deleted or winsorized.
+Rolling volatility,"30-day return standard deviation, annualized with sqrt(365)."
+Cross-source validation,"Yahoo closing prices are compared with CoinGecko over the recent validation window, allowing a one-day boundary shift. PASS requires at least 100 matches, correlation >= 0.95, median absolute relative difference <= 5%, and 95th-percentile difference <= 15%."

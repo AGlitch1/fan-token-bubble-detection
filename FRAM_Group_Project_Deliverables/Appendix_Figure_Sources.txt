@@ -1,0 +1,46 @@
+APPENDIX FIGURE SOURCES
+
+The appendix only plots existing stored observations and estimates; no new statistical model was fitted.
+A.1-A.2: daily indexed prices and annualized 30-day rolling volatility, through 19 September 2026.
+A.3-A.4: June-sample BSADF statistics and the approximate endpoint reference used in the report.
+A.5: the original June Phase 3 penalized mean/log-squared-return change dates, not the later KS-CPM results.
+A.6-A.7: June-sample Bayesian local-ADF positive-slope probabilities.
+A.8: BTC, ETH and CHZ price, BSADF and Bayesian diagnostics, through 30 June 2026.
+A.9: POR and ARG prices and stored June/September model paths over January-September 2026.
+Full-sample Bayesian scaling is retrospective, as disclosed in the existing study limitations.
+Token order follows the report sample-composition table. Statistical reference values remain approximate.
+Vector PDFs and high-resolution PNGs are in LaTeX/figures/appendix/.
+
+SOURCE FILES AND SHA-256 HASHES
+
+Code-and-Data/Processed-data/clean_daily_panel.csv
+87aab9f152770533c9a079c6523a4a06657f4349010338e7e2e16fb0de18abd9
+
+Code-and-Data/Results/Report-aligned/psy_bsadf_series.csv
+abfe7c7bef1792e49165fbe3c23a56ed52a65bc7d6f282db77e729cc8e756fda
+
+Code-and-Data/Results/Report-aligned/bayesian_local_adf.csv
+fe9984843478a13c1dc0567d23fdb8da751cb3593b90112cd52749676f78e2f1
+
+Code-and-Data/Results/Report-aligned/psy_persistent_intervals.csv
+2ce96c804cece8297696eaf716d823d48e48b8c6c0dc10f4d1d9c600bcb99387
+
+Provenance/Legacy-Python/outputs/phase3_report_support/june_change_points.csv
+089cf626b3091f6fc4e21cbfbef471e16ab4b11f158a40fd31005cf0296d8c8a
+
+Code-and-Data/Results/Report-aligned/psy_test_summary.csv
+eb09bd21ec65dba837455b93583ed5a476bc1a9629ddda03818d930fd3b8e1a1
+
+SOURCE CHECKS
+{
+  "fan_tokens": 20,
+  "june_change_points": 125,
+  "june_volatility_changes": 96,
+  "june_fan_gsadf_exceedances": 9,
+  "september_fan_gsadf_exceedances": 10,
+  "june_bayesian_days_ge95": 5,
+  "september_retained_tokens": [
+    "POR",
+    "ARG"
+  ]
+}

@@ -1,0 +1,140 @@
+METHODOLOGY AND PORTING RECORD
+=============================
+
+PROFILE NOTE (2026-11-06): This file documents the earlier optional monthly/
+weekly paper-extension profile, now run with run_paper_extensions.R and shown
+in Paper-extensions.Rmd. The default workflow follows the submitted report's
+daily Phase 3 scope. Working-paper/Report-alignment.txt controls that profile.
+Google Trends and financial stress are outside the submitted report's scope,
+not missing tasks required by the default project workflow. Earlier statements
+below about unavailable paper sections concern only the optional full-paper scope.
+
+Source
+------
+Gian Luca Vriz and Luigi Grossi, "Green bubbles: A four-stage paradigm for
+detection and propagation", Energy Economics 154 (2026), 109095.
+DOI: https://doi.org/10.1016/j.eneco.2025.109095
+Supplied article: Working-paper/core.pdf.
+Repository: https://github.com/GianVriz/Green-Bubbles-A-Four-Stage-Paradigm-for-Detection-and-Propagation
+Archived revision: 88dbf4d6f07c61567ae65c81dbe4df9f5ee52a20.
+The complete tracked tree of that local checkout is in Original-paper/.
+Its untracked, locally generated checkpoints are not part of the upstream tree.
+
+Scope
+-----
+This is an R adaptation of the original methodology to the existing project's
+20-token sample. It is not a literal reproduction of the green-energy results.
+Code-and-Data/Code.Rmd is the project notebook; R/*.R are its source modules.
+Original-paper/Code-and-Data/Code.Rmd is the unchanged original notebook,
+including all simulation and data-specific original sections.
+No Python process is invoked by the R workflow.
+
+Method mapping (original Code.Rmd line numbers refer to the archived file)
+------------------------------------------------------------------------
+1. Raw inputs and daily cleaning: R/01_process_data.R.
+   The paper reads financial CSVs. Our R code reads all 23 frozen provider JSON
+   responses, reconstructs raw OHLC/volume, and creates daily calendars.
+   Provider arrays are not interpolated. Invalid prices are flagged and excluded
+   from models. Extreme returns are retained with the original manual review.
+   The old Python raw CSV and panels are independently retained for comparison.
+
+2. Monthly arithmetic mean prices: original lines 511-521 -> 01_process_data.R.
+   Do not replace means with end-of-month closes. Natural-log monthly returns
+   have their first value padded with 0, as in the original. This introduces an
+   artificial initial zero; it is retained for source fidelity and documented.
+   Month/week means with internal missing daily prices are unavailable; models
+   split into contiguous valid blocks. Initial listing periods can be partial
+   and are flagged full_calendar_period=FALSE. The incomplete final month/week
+   is dropped. Daily data still extend through 2026-09-19.
+
+3. Euphoric moments: original lines 579-595 -> R/02_detection.R.
+   exuber 1.1.0 radf() on monthly PRICE LEVELS, default minimum window and lag 0.
+   No Python ADF code, interpolated PSY tables, or constant GSADF threshold is
+   used for date stamping. Explicit radf_mc_cv(nrep=1000, seed=4) supplies
+   endpoint-specific BSADF sequences. The original uses package-cached defaults
+   through autoplot/datestamp; explicit finite-sample Monte Carlo values make
+   this adaptation reproducible for each shorter token sample. Consequently
+   exact dates can differ from the original's implicit cached critical values.
+   datestamp(sig_lvl=95, min_duration=0) retains the package's GSADF rejection
+   gate. The Python workflow's 30-day episode rule is not carried over.
+   End dates, Duration and Ongoing retain exuber's conventions; exported
+   package_duration_periods must not be read as a daily duration.
+
+4. Bubble distribution regimes: original lines 526-534 -> R/02_detection.R.
+   cpm 2.3 processStream(log returns, "Kolmogorov-Smirnov", ARL0=500).
+   Original startup=46 corresponds to about 20% of 230 monthly observations.
+   Adaptation: max(20, round(0.20*n)) per contiguous token block, retaining
+   cpm's customary 20-observation initialization floor. This matters for short
+   samples: it is often more than 20%. No mean-shift dynamic-programming model
+   substitutes for KS-CPM. Estimated changePoint and later detectionTime are
+   exported separately. A changePoint is the last pre-change observation;
+   first_post_change_date explicitly records the next period.
+   Economic labels (formation, burst, decline) require external justification.
+
+5. Weekly robustness: original lines 552-573 -> R/02_detection.R.
+   Weekly mean prices, Monday weeks, KS processStream, ARL0=5000, startup
+   max(20, round(0.20*n)). Original startup=200 was specific to its longer
+   weekly history. This is an explicit sample-length adaptation.
+
+6. Propagation: original lines 1222-1250 and 1586-1599 -> R/03_propagation.R.
+   Same urca::ca.jo(trace, K=2, ecdet="none", spec="longrun") and cajorls
+   methods, applied to standardized token/BTC/CHZ prices. VAR(p=1,type="both")
+   and vars::causality provide joint Granger F-tests. The variable system is a
+   declared adaptation: BTC and CHZ are benchmarks, not financial-stress or oil
+   proxies. No result is called the paper's FSI propagation result.
+   Levels and differences have ur.df(type="drift",lags=1,selectlags="AIC")
+   diagnostics. These tests do not establish I(1) with certainty. Cointegration
+   interpretation is conditional on suitable integration properties.
+   The sequential 5% trace rule selects rank. We do not impose the paper's
+   r=2 on a different sample. Rank zero/full rank produces no reduced-rank VECM.
+
+7. Forecasting: original lines 1543-1749 -> R/04_forecasting.R.
+   auto.arima(seasonal=FALSE), expanding windows, one-step forecasts.
+   BSTS: AddAutoAr(lags=1) + AddLocalLevel + AddSeasonal(nseasons=12),
+   niter=1000, seed=9, SuggestBurn(0.1), 95% intervals. We follow the ACTUAL
+   REPOSITORY CODE: the published formula includes a local linear trend,
+   but its R implementation uses AddLocalLevel, not AddLocalLinearTrend.
+   Original exercise: 73 initial months and 37 holdout months. Adaptation:
+   last min(37,n-36) months with at least 36 training months, per token's
+   longest consecutive monthly block. No future target price enters training.
+   Not every token shares the same test dates; compare models within a token.
+
+8. Forecast comparison: original lines 1916-1988 -> R/04_forecasting.R.
+   Metrics RMSE and SMAPE on log prices (source scale), plus USD price metrics.
+   Exponentiating a log-point forecast is labeled a median, not a bias-adjusted
+   expected USD price. multDM::DM.test(SE,h=1,c=FALSE,H1="more") is used.
+   The available BSTS is the comparison benchmark instead of an unavailable
+   ARIMAX_t. MCSprocedure(alpha=0.15,B=5000,statistic="TR"), seed=5, runs
+   separately per token on matched evaluation dates; no artificial concatenated
+   token time series enters a serial-dependence test. The model set contains
+   only the models actually estimated with available inputs.
+
+Unavailable parts with current data
+----------------------------------
+The supplied fan-token project has no appropriate Google Trends/search-interest
+series and no financial-stress index. Therefore the fan-token version cannot
+reproduce the paper's Google Trends density/KS comparisons, its financial-stress
+VECM conclusion, or its four-model ARIMAX superiority claim. There are no invented
+values, no reused green-energy sentiment labeled fan-token sentiment, and no
+silent substituted stress proxy. Results/method_status.csv records this scope.
+
+Optional ARIMAX source is implemented in 04_forecasting.R. To enable it, supply
+Google Trends/fan_token_search_interest.csv with asset_id,date,search_interest
+for every modeled token/month (date is YYYY-MM-01, values finite and >=0).
+The header-only schema in Configuration/templates is NOT a dataset.
+The module uses log1p(search_interest); this handles genuine zero interest and
+is an explicit transformation choice for future data, not a current result.
+ARIMAX_t1 uses only previous-month covariates; ARIMAX_t requires observed
+current-month interest and is a conditional nowcast. No density regime labels
+are fabricated. The untouched original has the complete original density,
+stress, simulation and forecasting code/data for reference and reproduction.
+
+Why the old Python results differ
+--------------------------------
+The archived Python formal analysis used log-price ADF, interpolated published
+critical-value tables, penalized mean-shift segmentation and a Bayesian online
+local ADF model. These are not the same as this paper's price-level exuber
+workflow, sequential KS-CPM and BSTS forecast model. The old numeric results and
+reports are provenance, not outputs of the new R method. Daily data values are
+checked against the legacy panel to verify that changing the method did not
+silently change the frozen inputs.

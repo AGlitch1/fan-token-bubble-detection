@@ -1,0 +1,9 @@
+source,url,use
+CoinGecko fan-token category snapshot,https://api.coingecko.com/api/v3/coins/markets,Sample identification and market-cap snapshot
+Yahoo Finance chart service,https://query1.finance.yahoo.com/v8/finance/chart/,Full daily OHLC and reported volume history
+CoinGecko historical chart validation,https://api.coingecko.com/api/v3/coins/{id}/market_chart/range,Recent cross-source price validation
+Binance spot-market klines,https://api.binance.com/api/v3/klines,"Independent verification of OG, ACM, and ALPINE daily candles"
+Binance official announcements,https://www.binance.com/en/support/announcement,Event verification for the OG and ACM extreme returns
+CoinGlass OG historical data,https://www.coinglass.com/currencies/OG/historical-data,Independent verification of the 23 December 2020 OG gain
+Independent fan-token study,https://iris.ru.is/ws/files/193795749/SSRN-id4408621.pdf,External corroboration of OG explosive-price episodes
+Contemporaneous ALPINE report,https://www.svsport.it/2025/10/01/leggi-notizia/argomenti/altri-sport-1/articolo/alpine-fan-token-crolla-del-73-scendendo-sotto-i-2-dollari.html,Independent reporting of the 1 October 2025 ALPINE crash

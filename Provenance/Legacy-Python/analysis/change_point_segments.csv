@@ -1,0 +1,197 @@
+asset_id,symbol,asset_name,asset_type,sample_rank,block_index,dimension,segment_number,start_date,end_date,observations,mean_daily_log_return_pct,annualized_volatility_pct
+bitcoin,BTC,Bitcoin,benchmark,,1,return_mean,1,2019-01-02,2026-09-19,2818,0.10826619294476532,61.34738584028039
+bitcoin,BTC,Bitcoin,benchmark,,1,log_squared_return,1,2019-01-02,2019-04-29,118,0.2638432649771863,50.00137005063592
+bitcoin,BTC,Bitcoin,benchmark,,1,log_squared_return,2,2019-04-30,2019-08-21,114,0.5776947206783062,92.07646070743333
+bitcoin,BTC,Bitcoin,benchmark,,1,log_squared_return,3,2019-08-22,2020-11-23,460,0.12915286255148387,71.49644655435559
+bitcoin,BTC,Bitcoin,benchmark,,1,log_squared_return,4,2020-11-24,2022-07-28,612,0.042668144111842915,76.79670272256217
+bitcoin,BTC,Bitcoin,benchmark,,1,log_squared_return,5,2022-07-29,2023-07-14,351,0.06858791645859276,50.72047238473122
+bitcoin,BTC,Bitcoin,benchmark,,1,log_squared_return,6,2023-07-15,2023-10-14,92,-0.13214098608039263,29.991132980742446
+bitcoin,BTC,Bitcoin,benchmark,,1,log_squared_return,7,2023-10-15,2026-09-19,1071,0.10332662872643641,47.41734737118461
+chiliz,CHZ,Chiliz,benchmark,,1,return_mean,1,2019-07-02,2021-02-07,587,0.050235007168742324,145.88575466436788
+chiliz,CHZ,Chiliz,benchmark,,1,return_mean,2,2021-02-08,2021-03-12,33,10.484716674758898,349.48520869655357
+chiliz,CHZ,Chiliz,benchmark,,1,return_mean,3,2021-03-13,2026-09-19,2017,-0.19122222178909093,106.65276900118265
+chiliz,CHZ,Chiliz,benchmark,,1,log_squared_return,1,2019-07-02,2020-03-30,273,-0.35879085781784775,185.3101592777592
+chiliz,CHZ,Chiliz,benchmark,,1,log_squared_return,2,2020-03-31,2020-12-13,258,0.26107111700479774,87.22922916115397
+chiliz,CHZ,Chiliz,benchmark,,1,log_squared_return,3,2020-12-14,2021-06-13,182,1.7178273371622004,234.65694797649954
+chiliz,CHZ,Chiliz,benchmark,,1,log_squared_return,4,2021-06-14,2022-12-20,555,-0.16695847160346164,128.4238334735432
+chiliz,CHZ,Chiliz,benchmark,,1,log_squared_return,5,2022-12-21,2023-10-27,311,-0.18458616503168776,64.7597608861519
+chiliz,CHZ,Chiliz,benchmark,,1,log_squared_return,6,2023-10-28,2026-06-25,972,-0.13053182395170462,93.20727663712327
+chiliz,CHZ,Chiliz,benchmark,,1,log_squared_return,7,2026-06-26,2026-09-19,86,-0.1781099917924876,59.03882961205903
+ethereum,ETH,Ethereum,benchmark,,1,return_mean,1,2019-01-02,2026-09-19,2818,0.10390371877561064,80.6080039378064
+ethereum,ETH,Ethereum,benchmark,,1,log_squared_return,1,2019-01-02,2020-10-31,669,0.15095474642747728,90.79231505468529
+ethereum,ETH,Ethereum,benchmark,,1,log_squared_return,2,2020-11-01,2022-09-22,691,0.17855613759180733,99.55569804719127
+ethereum,ETH,Ethereum,benchmark,,1,log_squared_return,3,2022-09-23,2023-05-08,228,0.1452784510754462,64.98238584966833
+ethereum,ETH,Ethereum,benchmark,,1,log_squared_return,4,2023-05-09,2023-11-25,201,0.05961157366029129,40.43686731735002
+ethereum,ETH,Ethereum,benchmark,,1,log_squared_return,5,2023-11-26,2026-09-19,1029,0.02266690954599552,67.38786998497936
+croatian-ff-fan-token,VATRENI,Croatian Football Federation Token,fan_token,1.0,1,return_mean,1,2022-11-28,2026-09-19,1392,0.04312298600825913,195.33213876850434
+croatian-ff-fan-token,VATRENI,Croatian Football Federation Token,fan_token,1.0,1,log_squared_return,1,2022-11-28,2023-07-03,218,-0.5365358667177207,168.9963665435149
+croatian-ff-fan-token,VATRENI,Croatian Football Federation Token,fan_token,1.0,1,log_squared_return,2,2023-07-04,2023-10-31,120,-0.1658332759612742,63.96517293166877
+croatian-ff-fan-token,VATRENI,Croatian Football Federation Token,fan_token,1.0,1,log_squared_return,3,2023-11-01,2024-05-29,211,0.31373481153637817,160.02679413621203
+croatian-ff-fan-token,VATRENI,Croatian Football Federation Token,fan_token,1.0,1,log_squared_return,4,2024-05-30,2024-08-18,81,-1.79705407307846,336.5964883130409
+croatian-ff-fan-token,VATRENI,Croatian Football Federation Token,fan_token,1.0,1,log_squared_return,5,2024-08-19,2026-09-19,762,0.36253982056232564,204.36880926684157
+og-fan-token,OG,OG Fan Token,fan_token,2.0,1,return_mean,1,2020-06-22,2026-09-19,2281,0.017299913856885916,153.19326547359802
+og-fan-token,OG,OG Fan Token,fan_token,2.0,1,log_squared_return,1,2020-06-22,2020-12-13,175,0.043426830950117304,123.51978276011722
+og-fan-token,OG,OG Fan Token,fan_token,2.0,1,log_squared_return,2,2020-12-14,2021-05-28,166,0.644489200543748,318.9554854772933
+og-fan-token,OG,OG Fan Token,fan_token,2.0,1,log_squared_return,3,2021-05-29,2023-07-08,771,-0.043908633231176705,150.10067555832245
+og-fan-token,OG,OG Fan Token,fan_token,2.0,1,log_squared_return,4,2023-07-09,2023-08-14,37,-0.3406583869876359,25.87490206605523
+og-fan-token,OG,OG Fan Token,fan_token,2.0,1,log_squared_return,5,2023-08-15,2023-09-13,30,0.7410013344131123,227.96766029476643
+og-fan-token,OG,OG Fan Token,fan_token,2.0,1,log_squared_return,6,2023-09-14,2023-12-04,82,1.0006594646076354e-05,43.21091467277358
+og-fan-token,OG,OG Fan Token,fan_token,2.0,1,log_squared_return,7,2023-12-05,2026-07-02,941,-0.06583901350389842,125.54242144991768
+og-fan-token,OG,OG Fan Token,fan_token,2.0,1,log_squared_return,8,2026-07-03,2026-09-19,79,0.1399717528457956,48.78591771093876
+atletico-madrid,ATM,Atletico Madrid Fan Token,fan_token,3.0,1,return_mean,1,2020-06-22,2020-11-29,161,-0.04625298851172009,103.34822167257565
+atletico-madrid,ATM,Atletico Madrid Fan Token,fan_token,3.0,1,return_mean,2,2020-11-30,2020-12-29,30,6.261028214338858,250.57467623666537
+atletico-madrid,ATM,Atletico Madrid Fan Token,fan_token,3.0,1,return_mean,3,2020-12-30,2021-01-29,31,-5.855424062810897,330.21268820306153
+atletico-madrid,ATM,Atletico Madrid Fan Token,fan_token,3.0,1,return_mean,4,2021-01-30,2021-05-21,112,2.2379156180511712,206.2295808841807
+atletico-madrid,ATM,Atletico Madrid Fan Token,fan_token,3.0,1,return_mean,5,2021-05-22,2021-06-21,31,-5.954237109018118,303.5630053368471
+atletico-madrid,ATM,Atletico Madrid Fan Token,fan_token,3.0,1,return_mean,6,2021-06-22,2026-09-19,1916,-0.10409262297681117,87.58783828898295
+atletico-madrid,ATM,Atletico Madrid Fan Token,fan_token,3.0,1,log_squared_return,1,2020-06-22,2020-12-13,175,-0.005670423993703711,100.96896675857607
+atletico-madrid,ATM,Atletico Madrid Fan Token,fan_token,3.0,1,log_squared_return,2,2020-12-14,2021-05-29,167,0.6899195859994487,282.4808251360309
+atletico-madrid,ATM,Atletico Madrid Fan Token,fan_token,3.0,1,log_squared_return,3,2021-05-30,2022-11-20,540,-0.30299849046319194,108.93772681204501
+atletico-madrid,ATM,Atletico Madrid Fan Token,fan_token,3.0,1,log_squared_return,4,2022-11-21,2023-08-22,275,-0.010196023012589234,81.05919966964238
+atletico-madrid,ATM,Atletico Madrid Fan Token,fan_token,3.0,1,log_squared_return,5,2023-08-23,2024-02-29,191,0.04319243480957697,32.71815284770347
+atletico-madrid,ATM,Atletico Madrid Fan Token,fan_token,3.0,1,log_squared_return,6,2024-03-01,2026-09-19,933,-0.09706453159894216,86.27794872674586
+santos-fc-fan-token,SANTOS,Santos FC Fan Token,fan_token,4.0,1,return_mean,1,2021-12-02,2026-09-19,1753,-0.17151435468348494,120.35790168061489
+santos-fc-fan-token,SANTOS,Santos FC Fan Token,fan_token,4.0,1,log_squared_return,1,2021-12-02,2022-04-24,144,-0.5749954828446568,175.9935598097728
+santos-fc-fan-token,SANTOS,Santos FC Fan Token,fan_token,4.0,1,log_squared_return,2,2022-04-25,2022-06-16,53,-0.44601037696768914,285.50989180764304
+santos-fc-fan-token,SANTOS,Santos FC Fan Token,fan_token,4.0,1,log_squared_return,3,2022-06-17,2022-08-13,58,0.5014420259995575,55.19495974075291
+santos-fc-fan-token,SANTOS,Santos FC Fan Token,fan_token,4.0,1,log_squared_return,4,2022-08-14,2022-11-21,100,0.4152598716959709,238.15403769106547
+santos-fc-fan-token,SANTOS,Santos FC Fan Token,fan_token,4.0,1,log_squared_return,5,2022-11-22,2023-08-24,276,-0.3182373118066082,73.43686287707747
+santos-fc-fan-token,SANTOS,Santos FC Fan Token,fan_token,4.0,1,log_squared_return,6,2023-08-25,2023-11-09,77,-0.020398264552450734,23.812957701746257
+santos-fc-fan-token,SANTOS,Santos FC Fan Token,fan_token,4.0,1,log_squared_return,7,2023-11-10,2026-09-19,1045,-0.16787772679391377,94.69465754461505
+paris-saint-germain-fan-token,PSG,Paris Saint-Germain Fan Token,fan_token,5.0,1,return_mean,1,2020-06-12,2026-09-19,2291,-0.11226384365028562,107.95080760631753
+paris-saint-germain-fan-token,PSG,Paris Saint-Germain Fan Token,fan_token,5.0,1,log_squared_return,1,2020-06-12,2021-08-30,445,0.3785269805749182,190.10521917923683
+paris-saint-germain-fan-token,PSG,Paris Saint-Germain Fan Token,fan_token,5.0,1,log_squared_return,2,2021-08-31,2022-11-24,451,-0.38985593478576586,102.3285336604327
+paris-saint-germain-fan-token,PSG,Paris Saint-Germain Fan Token,fan_token,5.0,1,log_squared_return,3,2022-11-25,2024-02-29,462,-0.0897172604533826,48.93019577298287
+paris-saint-germain-fan-token,PSG,Paris Saint-Germain Fan Token,fan_token,5.0,1,log_squared_return,4,2024-03-01,2024-06-23,115,-0.15589492978696598,86.92934704453222
+paris-saint-germain-fan-token,PSG,Paris Saint-Germain Fan Token,fan_token,5.0,1,log_squared_return,5,2024-06-24,2026-05-05,681,-0.20671995177511837,68.1241011847925
+paris-saint-germain-fan-token,PSG,Paris Saint-Germain Fan Token,fan_token,5.0,1,log_squared_return,6,2026-05-06,2026-06-11,37,-0.8260131854567324,135.8875067126556
+paris-saint-germain-fan-token,PSG,Paris Saint-Germain Fan Token,fan_token,5.0,1,log_squared_return,7,2026-06-12,2026-09-19,100,-0.19099879294543898,28.609525327308504
+fc-barcelona-fan-token,BAR,FC Barcelona Fan Token,fan_token,6.0,1,return_mean,1,2020-06-25,2021-02-09,230,0.1982655455584093,122.59952680190273
+fc-barcelona-fan-token,BAR,FC Barcelona Fan Token,fan_token,6.0,1,return_mean,2,2021-02-10,2021-03-15,34,4.759752797305062,162.81133799445468
+fc-barcelona-fan-token,BAR,FC Barcelona Fan Token,fan_token,6.0,1,return_mean,3,2021-03-16,2026-09-19,2014,-0.2620049435668654,84.43144978685513
+fc-barcelona-fan-token,BAR,FC Barcelona Fan Token,fan_token,6.0,1,log_squared_return,1,2020-06-25,2021-06-18,359,0.24777475675989297,161.16826394166873
+fc-barcelona-fan-token,BAR,FC Barcelona Fan Token,fan_token,6.0,1,log_squared_return,2,2021-06-19,2023-06-14,726,-0.2730262628763203,87.00554228873577
+fc-barcelona-fan-token,BAR,FC Barcelona Fan Token,fan_token,6.0,1,log_squared_return,3,2023-06-15,2023-12-24,193,0.010485018092239121,34.584151143601694
+fc-barcelona-fan-token,BAR,FC Barcelona Fan Token,fan_token,6.0,1,log_squared_return,4,2023-12-25,2025-02-21,425,-0.06171780521064727,71.57886013934989
+fc-barcelona-fan-token,BAR,FC Barcelona Fan Token,fan_token,6.0,1,log_squared_return,5,2025-02-22,2026-09-19,575,-0.32482243106561887,55.401306502492034
+as-roma-fan-token,ASR,AS Roma Fan Token,fan_token,7.0,1,return_mean,1,2020-06-22,2020-11-29,161,-0.20186938054602038,113.22373642353001
+as-roma-fan-token,ASR,AS Roma Fan Token,fan_token,7.0,1,return_mean,2,2020-11-30,2020-12-29,30,7.378767646500491,334.03275684720546
+as-roma-fan-token,ASR,AS Roma Fan Token,fan_token,7.0,1,return_mean,3,2020-12-30,2021-01-28,30,-6.148227478472392,401.93143134385815
+as-roma-fan-token,ASR,AS Roma Fan Token,fan_token,7.0,1,return_mean,4,2021-01-29,2026-09-19,2060,-0.07216155401293714,102.07213463270904
+as-roma-fan-token,ASR,AS Roma Fan Token,fan_token,7.0,1,log_squared_return,1,2020-06-22,2020-12-13,175,-0.1636567672572796,109.63832887447857
+as-roma-fan-token,ASR,AS Roma Fan Token,fan_token,7.0,1,log_squared_return,2,2020-12-14,2021-06-21,190,0.3102318754901642,267.6725799051005
+as-roma-fan-token,ASR,AS Roma Fan Token,fan_token,7.0,1,log_squared_return,3,2021-06-22,2022-12-20,547,-0.1315405068536495,110.72618003407928
+as-roma-fan-token,ASR,AS Roma Fan Token,fan_token,7.0,1,log_squared_return,4,2022-12-21,2024-02-29,436,0.015309503037821122,58.795759674688675
+as-roma-fan-token,ASR,AS Roma Fan Token,fan_token,7.0,1,log_squared_return,5,2024-03-01,2024-05-14,75,0.5257368246425645,136.37992432653465
+as-roma-fan-token,ASR,AS Roma Fan Token,fan_token,7.0,1,log_squared_return,6,2024-05-15,2025-07-22,434,-0.1125326933868765,75.46609404960856
+as-roma-fan-token,ASR,AS Roma Fan Token,fan_token,7.0,1,log_squared_return,7,2025-07-23,2025-08-27,36,0.3048463032373172,252.07741299070432
+as-roma-fan-token,ASR,AS Roma Fan Token,fan_token,7.0,1,log_squared_return,8,2025-08-28,2026-09-19,388,-0.2856430785494824,80.51412979693092
+galatasaray-fan-token,GAL,Galatasaray Fan Token,fan_token,8.0,1,return_mean,1,2020-06-09,2026-09-19,2294,-0.07573832748922817,105.89225268166244
+galatasaray-fan-token,GAL,Galatasaray Fan Token,fan_token,8.0,1,log_squared_return,1,2020-06-09,2021-07-26,413,0.1855431990597324,170.52474260392836
+galatasaray-fan-token,GAL,Galatasaray Fan Token,fan_token,8.0,1,log_squared_return,2,2021-07-27,2021-11-13,110,-0.3357693124241705,56.32955938056392
+galatasaray-fan-token,GAL,Galatasaray Fan Token,fan_token,8.0,1,log_squared_return,3,2021-11-14,2022-06-28,227,-0.5106367930693723,151.384879362726
+galatasaray-fan-token,GAL,Galatasaray Fan Token,fan_token,8.0,1,log_squared_return,4,2022-06-29,2023-09-04,433,-0.02073187777423819,71.9366051202085
+galatasaray-fan-token,GAL,Galatasaray Fan Token,fan_token,8.0,1,log_squared_return,5,2023-09-05,2024-02-10,159,-0.11089004843042943,29.894871059669924
+galatasaray-fan-token,GAL,Galatasaray Fan Token,fan_token,8.0,1,log_squared_return,6,2024-02-11,2024-08-15,187,-0.020074184367605247,117.47785421816018
+galatasaray-fan-token,GAL,Galatasaray Fan Token,fan_token,8.0,1,log_squared_return,7,2024-08-16,2025-04-19,247,0.0022760438832878658,46.46435099477109
+galatasaray-fan-token,GAL,Galatasaray Fan Token,fan_token,8.0,1,log_squared_return,8,2025-04-20,2025-05-31,42,-0.6842973366991132,173.24702344832826
+galatasaray-fan-token,GAL,Galatasaray Fan Token,fan_token,8.0,1,log_squared_return,9,2025-06-01,2026-02-04,249,-0.004859405357374786,37.51395375258891
+galatasaray-fan-token,GAL,Galatasaray Fan Token,fan_token,8.0,1,log_squared_return,10,2026-02-05,2026-05-19,104,-0.20081916575546543,99.59697218403932
+galatasaray-fan-token,GAL,Galatasaray Fan Token,fan_token,8.0,1,log_squared_return,11,2026-05-20,2026-09-19,123,-0.13730166138521613,27.630693940546116
+fc-porto,PORTO,FC Porto Fan Token,fan_token,10.0,1,return_mean,1,2021-11-17,2022-04-11,146,-0.2615008655230262,125.20125195654049
+fc-porto,PORTO,FC Porto Fan Token,fan_token,10.0,1,return_mean,2,2022-04-12,2022-05-12,31,-5.411723893661448,214.8791352095875
+fc-porto,PORTO,FC Porto Fan Token,fan_token,10.0,1,return_mean,3,2022-05-13,2026-09-19,1591,-0.052449740127116264,89.23423438941431
+fc-porto,PORTO,FC Porto Fan Token,fan_token,10.0,1,log_squared_return,1,2021-11-17,2022-12-21,400,-0.28805566210016426,152.79527291103463
+fc-porto,PORTO,FC Porto Fan Token,fan_token,10.0,1,log_squared_return,2,2022-12-22,2024-02-03,409,-0.021367532706852366,54.51680835671586
+fc-porto,PORTO,FC Porto Fan Token,fan_token,10.0,1,log_squared_return,3,2024-02-04,2024-07-09,157,-0.31111979950550356,89.33835637333647
+fc-porto,PORTO,FC Porto Fan Token,fan_token,10.0,1,log_squared_return,4,2024-07-10,2026-09-19,802,-0.14536497428002026,77.8830643705421
+manchester-city-fan-token,CITY,Manchester City Fan Token,fan_token,11.0,1,return_mean,1,2021-05-27,2022-04-12,321,-0.1617340072355026,100.9469523984536
+manchester-city-fan-token,CITY,Manchester City Fan Token,fan_token,11.0,1,return_mean,2,2022-04-13,2022-05-12,30,-4.369978487991645,191.75319381868337
+manchester-city-fan-token,CITY,Manchester City Fan Token,fan_token,11.0,1,return_mean,3,2022-05-13,2026-09-19,1591,-0.15357792028101327,67.60718515986973
+manchester-city-fan-token,CITY,Manchester City Fan Token,fan_token,11.0,1,log_squared_return,1,2021-05-27,2022-04-23,332,-0.17712193734012366,99.38296780929855
+manchester-city-fan-token,CITY,Manchester City Fan Token,fan_token,11.0,1,log_squared_return,2,2022-04-24,2022-05-26,33,-2.961863692572618,242.2696693576518
+manchester-city-fan-token,CITY,Manchester City Fan Token,fan_token,11.0,1,log_squared_return,3,2022-05-27,2023-06-29,399,-0.14730770334463966,75.74397030325667
+manchester-city-fan-token,CITY,Manchester City Fan Token,fan_token,11.0,1,log_squared_return,4,2023-06-30,2024-02-29,245,0.02671715214548217,34.830107133732774
+manchester-city-fan-token,CITY,Manchester City Fan Token,fan_token,11.0,1,log_squared_return,5,2024-03-01,2026-07-05,857,-0.24474774119646361,67.60902350363631
+manchester-city-fan-token,CITY,Manchester City Fan Token,fan_token,11.0,1,log_squared_return,6,2026-07-06,2026-09-19,76,-0.11623120412346005,25.580092421080074
+lazio-fan-token,LAZIO,Lazio Fan Token,fan_token,12.0,1,return_mean,1,2021-10-22,2021-12-04,44,-3.997606694413439,182.35591250237292
+lazio-fan-token,LAZIO,Lazio Fan Token,fan_token,12.0,1,return_mean,2,2021-12-05,2026-09-19,1750,-0.13462334824848088,98.36966013022897
+lazio-fan-token,LAZIO,Lazio Fan Token,fan_token,12.0,1,log_squared_return,1,2021-10-22,2022-12-21,426,-0.461445319902357,167.0458619590127
+lazio-fan-token,LAZIO,Lazio Fan Token,fan_token,12.0,1,log_squared_return,2,2022-12-22,2024-02-29,435,-0.04030586415959834,58.63122208431452
+lazio-fan-token,LAZIO,Lazio Fan Token,fan_token,12.0,1,log_squared_return,3,2024-03-01,2024-10-08,222,-0.24581358615186877,98.85145533129442
+lazio-fan-token,LAZIO,Lazio Fan Token,fan_token,12.0,1,log_squared_return,4,2024-10-09,2026-09-19,711,-0.20085257478971677,65.6813896058616
+juventus-fan-token,JUV,Juventus Fan Token,fan_token,13.0,1,return_mean,1,2020-04-23,2026-09-19,2341,-0.0835823368040279,103.10953719620906
+juventus-fan-token,JUV,Juventus Fan Token,fan_token,13.0,1,log_squared_return,1,2020-04-23,2021-10-10,536,0.3498249980511955,152.14118158860887
+juventus-fan-token,JUV,Juventus Fan Token,fan_token,13.0,1,log_squared_return,2,2021-10-11,2022-04-25,197,-0.5075318430469881,68.03496641561627
+juventus-fan-token,JUV,Juventus Fan Token,fan_token,13.0,1,log_squared_return,3,2022-04-26,2022-06-19,55,-0.6939977561397126,185.9105804841747
+juventus-fan-token,JUV,Juventus Fan Token,fan_token,13.0,1,log_squared_return,4,2022-06-20,2023-06-18,364,-0.13885476154744236,92.19196603189714
+juventus-fan-token,JUV,Juventus Fan Token,fan_token,13.0,1,log_squared_return,5,2023-06-19,2024-02-29,256,0.05296502274840193,55.73948317496966
+juventus-fan-token,JUV,Juventus Fan Token,fan_token,13.0,1,log_squared_return,6,2024-03-01,2025-03-17,382,-0.2057834327934257,98.31071257756942
+juventus-fan-token,JUV,Juventus Fan Token,fan_token,13.0,1,log_squared_return,7,2025-03-18,2026-09-19,551,-0.23489190751172878,61.71454727234791
+ac-milan-fan-token,ACM,AC Milan Fan Token,fan_token,14.0,1,return_mean,1,2021-02-24,2026-09-19,2034,-0.15126934322594698,102.55699315694851
+ac-milan-fan-token,ACM,AC Milan Fan Token,fan_token,14.0,1,log_squared_return,1,2021-02-24,2022-11-29,644,-0.12569607327983245,155.66685903186132
+ac-milan-fan-token,ACM,AC Milan Fan Token,fan_token,14.0,1,log_squared_return,2,2022-11-30,2024-02-29,457,-0.02514871475790368,57.12687686626486
+ac-milan-fan-token,ACM,AC Milan Fan Token,fan_token,14.0,1,log_squared_return,3,2024-03-01,2026-03-02,732,-0.23147954781072816,73.97675405248924
+ac-milan-fan-token,ACM,AC Milan Fan Token,fan_token,14.0,1,log_squared_return,4,2026-03-03,2026-09-19,201,-0.2278486631221346,39.25143918246274
+arsenal-fan-token,AFC,Arsenal Fan Token,fan_token,15.0,1,return_mean,1,2021-10-29,2026-05-15,1660,-0.13453167785638934,70.36831123252954
+arsenal-fan-token,AFC,Arsenal Fan Token,fan_token,15.0,1,return_mean,2,2026-05-16,2026-06-14,30,-4.084473475333012,108.32532170782974
+arsenal-fan-token,AFC,Arsenal Fan Token,fan_token,15.0,1,return_mean,3,2026-06-15,2026-09-19,97,-0.0431516958905616,19.601060105057872
+arsenal-fan-token,AFC,Arsenal Fan Token,fan_token,15.0,1,log_squared_return,1,2021-10-29,2022-06-19,234,-0.5554120805270559,100.54917643626906
+arsenal-fan-token,AFC,Arsenal Fan Token,fan_token,15.0,1,log_squared_return,2,2022-06-20,2024-01-19,579,-0.021884392271617592,70.45468725525356
+arsenal-fan-token,AFC,Arsenal Fan Token,fan_token,15.0,1,log_squared_return,3,2024-01-20,2024-02-18,30,0.41270414556804563,26.035518014836942
+arsenal-fan-token,AFC,Arsenal Fan Token,fan_token,15.0,1,log_squared_return,4,2024-02-19,2024-07-15,148,-0.17447345173933368,66.9576728883656
+arsenal-fan-token,AFC,Arsenal Fan Token,fan_token,15.0,1,log_squared_return,5,2024-07-16,2026-03-03,596,-0.1914497845235265,54.44189854571877
+arsenal-fan-token,AFC,Arsenal Fan Token,fan_token,15.0,1,log_squared_return,6,2026-03-04,2026-06-10,99,-0.7423068911193201,102.15968986107194
+arsenal-fan-token,AFC,Arsenal Fan Token,fan_token,15.0,1,log_squared_return,7,2026-06-11,2026-09-19,101,-0.0630852846254349,19.48546973737028
+alpine-f1-team-fan-token,ALPINE,Alpine F1 Team Fan Token,fan_token,16.0,1,return_mean,1,2022-02-22,2025-08-05,1261,-0.14309117432983512,112.51285964876892
+alpine-f1-team-fan-token,ALPINE,Alpine F1 Team Fan Token,fan_token,16.0,1,return_mean,2,2025-08-06,2025-09-30,56,3.605997894053094,276.67007954599245
+alpine-f1-team-fan-token,ALPINE,Alpine F1 Team Fan Token,fan_token,16.0,1,return_mean,3,2025-10-01,2025-10-30,30,-7.417546612318393,484.00387500496174
+alpine-f1-team-fan-token,ALPINE,Alpine F1 Team Fan Token,fan_token,16.0,1,return_mean,4,2025-10-31,2026-09-19,324,-0.2265518921687501,66.02916259734732
+alpine-f1-team-fan-token,ALPINE,Alpine F1 Team Fan Token,fan_token,16.0,1,log_squared_return,1,2022-02-22,2022-05-21,89,-0.46871116944124064,284.0244963950915
+alpine-f1-team-fan-token,ALPINE,Alpine F1 Team Fan Token,fan_token,16.0,1,log_squared_return,2,2022-05-22,2023-04-21,335,-0.04685122024512783,111.03242788178602
+alpine-f1-team-fan-token,ALPINE,Alpine F1 Team Fan Token,fan_token,16.0,1,log_squared_return,3,2023-04-22,2024-02-28,313,-0.08274467077189555,49.921604534265455
+alpine-f1-team-fan-token,ALPINE,Alpine F1 Team Fan Token,fan_token,16.0,1,log_squared_return,4,2024-02-29,2025-07-26,514,-0.1783722179127294,86.9726634255872
+alpine-f1-team-fan-token,ALPINE,Alpine F1 Team Fan Token,fan_token,16.0,1,log_squared_return,5,2025-07-27,2025-11-07,104,-0.24169129305475706,342.56739552088277
+alpine-f1-team-fan-token,ALPINE,Alpine F1 Team Fan Token,fan_token,16.0,1,log_squared_return,6,2025-11-08,2026-09-19,316,-0.23513465473527365,63.28187487219077
+inter-milan-fan-token,INTER,Inter Milan Fan Token,fan_token,17.0,1,return_mean,1,2021-09-15,2022-04-12,210,-0.017913598173984843,88.25279922744083
+inter-milan-fan-token,INTER,Inter Milan Fan Token,fan_token,17.0,1,return_mean,2,2022-04-13,2022-05-12,30,-4.40478167642318,186.31143392657458
+inter-milan-fan-token,INTER,Inter Milan Fan Token,fan_token,17.0,1,return_mean,3,2022-05-13,2026-09-19,1591,-0.149275126820521,67.96055498767218
+inter-milan-fan-token,INTER,Inter Milan Fan Token,fan_token,17.0,1,log_squared_return,1,2021-09-15,2022-09-24,375,-0.29501037388737894,99.63145823732415
+inter-milan-fan-token,INTER,Inter Milan Fan Token,fan_token,17.0,1,log_squared_return,2,2022-09-25,2026-07-25,1400,-0.1878675999818749,67.80706278696438
+inter-milan-fan-token,INTER,Inter Milan Fan Token,fan_token,17.0,1,log_squared_return,3,2026-07-26,2026-09-19,56,0.004312455387692601,22.864988736955258
+trabzonspor-fan-token,TRA,Trabzonspor Fan Token,fan_token,18.0,1,return_mean,1,2020-11-11,2022-04-12,518,0.36839742095154654,134.32525295557105
+trabzonspor-fan-token,TRA,Trabzonspor Fan Token,fan_token,18.0,1,return_mean,2,2022-04-13,2022-05-12,30,-5.609596865640044,254.93496697682917
+trabzonspor-fan-token,TRA,Trabzonspor Fan Token,fan_token,18.0,1,return_mean,3,2022-05-13,2026-09-19,1591,-0.12634450164991978,84.9288163527822
+trabzonspor-fan-token,TRA,Trabzonspor Fan Token,fan_token,18.0,1,log_squared_return,1,2020-11-11,2022-04-22,528,0.36437288238624244,133.29780892381513
+trabzonspor-fan-token,TRA,Trabzonspor Fan Token,fan_token,18.0,1,log_squared_return,2,2022-04-23,2022-05-22,30,-4.248722915580266,297.8225059075233
+trabzonspor-fan-token,TRA,Trabzonspor Fan Token,fan_token,18.0,1,log_squared_return,3,2022-05-23,2023-11-25,552,-0.15292662940413473,74.22550622585094
+trabzonspor-fan-token,TRA,Trabzonspor Fan Token,fan_token,18.0,1,log_squared_return,4,2023-11-26,2024-02-18,85,-0.1181141393565268,24.818728427918316
+trabzonspor-fan-token,TRA,Trabzonspor Fan Token,fan_token,18.0,1,log_squared_return,5,2024-02-19,2024-04-16,58,0.310381767375732,216.44250746332582
+trabzonspor-fan-token,TRA,Trabzonspor Fan Token,fan_token,18.0,1,log_squared_return,6,2024-04-17,2026-09-19,886,-0.18842695226326844,76.10098346117394
+argentine-football-association-fan-token,ARG,Argentine Football Association Fan Token,fan_token,19.0,1,return_mean,1,2021-08-11,2026-09-19,1866,-0.220360826085896,120.38931705474494
+argentine-football-association-fan-token,ARG,Argentine Football Association Fan Token,fan_token,19.0,1,log_squared_return,1,2021-08-11,2022-07-23,347,-0.3811117596340389,155.6276428081175
+argentine-football-association-fan-token,ARG,Argentine Football Association Fan Token,fan_token,19.0,1,log_squared_return,2,2022-07-24,2022-12-31,161,0.1779288074714888,210.99254512541515
+argentine-football-association-fan-token,ARG,Argentine Football Association Fan Token,fan_token,19.0,1,log_squared_return,3,2023-01-01,2023-12-12,346,-0.18474115988011114,49.27502278834488
+argentine-football-association-fan-token,ARG,Argentine Football Association Fan Token,fan_token,19.0,1,log_squared_return,4,2023-12-13,2024-09-15,278,-0.032734946567635495,122.15788516254038
+argentine-football-association-fan-token,ARG,Argentine Football Association Fan Token,fan_token,19.0,1,log_squared_return,5,2024-09-16,2025-11-01,412,-0.010564678917375126,52.29969176294037
+argentine-football-association-fan-token,ARG,Argentine Football Association Fan Token,fan_token,19.0,1,log_squared_return,6,2025-11-02,2026-09-19,322,-0.7149709773537282,129.46657587290937
+napoli-fan-token,NAP,Napoli Fan Token,fan_token,20.0,1,return_mean,1,2022-09-03,2025-04-18,959,-0.15138342689328632,78.05247404682365
+napoli-fan-token,NAP,Napoli Fan Token,fan_token,20.0,1,return_mean,2,2025-04-19,2025-05-19,31,3.2856386018497994,138.21296393401778
+napoli-fan-token,NAP,Napoli Fan Token,fan_token,20.0,1,return_mean,3,2025-05-20,2025-06-22,34,-3.7733327209435186,112.22787926586253
+napoli-fan-token,NAP,Napoli Fan Token,fan_token,20.0,1,return_mean,4,2025-06-23,2026-09-19,454,-0.22044571326963341,63.88696754338733
+napoli-fan-token,NAP,Napoli Fan Token,fan_token,20.0,1,log_squared_return,1,2022-09-03,2023-04-17,227,0.283597233135935,109.75466590325179
+napoli-fan-token,NAP,Napoli Fan Token,fan_token,20.0,1,log_squared_return,2,2023-04-18,2023-05-18,31,-1.7679690871447198,105.84242074110355
+napoli-fan-token,NAP,Napoli Fan Token,fan_token,20.0,1,log_squared_return,3,2023-05-19,2025-04-18,701,-0.2207506941669508,62.46535704774006
+napoli-fan-token,NAP,Napoli Fan Token,fan_token,20.0,1,log_squared_return,4,2025-04-19,2025-06-06,49,-0.1343682183015009,161.2928152109672
+napoli-fan-token,NAP,Napoli Fan Token,fan_token,20.0,1,log_squared_return,5,2025-06-07,2026-09-19,470,-0.25518473826037424,63.38577500067656
+portugal-national-team-fan-token,POR,Portugal National Team Fan Token,fan_token,22.0,1,return_mean,1,2021-11-25,2022-07-17,235,-0.21684180307674356,119.33802788259514
+portugal-national-team-fan-token,POR,Portugal National Team Fan Token,fan_token,22.0,1,return_mean,2,2022-07-18,2022-08-18,32,6.481295168895836,163.09860637369337
+portugal-national-team-fan-token,POR,Portugal National Team Fan Token,fan_token,22.0,1,return_mean,3,2022-08-19,2026-09-19,1493,-0.2858659328628432,110.1791308512743
+portugal-national-team-fan-token,POR,Portugal National Team Fan Token,fan_token,22.0,1,log_squared_return,1,2021-11-25,2023-01-08,410,-0.0342772563891083,139.18685468426514
+portugal-national-team-fan-token,POR,Portugal National Team Fan Token,fan_token,22.0,1,log_squared_return,2,2023-01-09,2024-03-07,424,0.20890823822575305,54.207227822067104
+portugal-national-team-fan-token,POR,Portugal National Team Fan Token,fan_token,22.0,1,log_squared_return,3,2024-03-08,2024-04-17,41,0.3778137145800369,429.0053069506832
+portugal-national-team-fan-token,POR,Portugal National Team Fan Token,fan_token,22.0,1,log_squared_return,4,2024-04-18,2024-05-24,37,-0.15738367187643568,40.580302797027215
+portugal-national-team-fan-token,POR,Portugal National Team Fan Token,fan_token,22.0,1,log_squared_return,5,2024-05-25,2024-07-14,51,-2.1174625842282606,190.90891666247134
+portugal-national-team-fan-token,POR,Portugal National Team Fan Token,fan_token,22.0,1,log_squared_return,6,2024-07-15,2025-10-24,467,-0.050344398015629364,55.97914721410703
+portugal-national-team-fan-token,POR,Portugal National Team Fan Token,fan_token,22.0,1,log_squared_return,7,2025-10-25,2026-07-31,280,-0.7773643748904673,98.28750953702003
+portugal-national-team-fan-token,POR,Portugal National Team Fan Token,fan_token,22.0,1,log_squared_return,8,2026-08-01,2026-09-19,50,-0.1076269954172,42.30206330254827

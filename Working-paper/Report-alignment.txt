@@ -1,0 +1,116 @@
+ALIGNMENT WITH THE SUBMITTED FRAM REPORT
+======================================
+
+Source reviewed
+---------------
+FRAM ASSIGNMENT_SEM 1, 2026-27_Abhav_Garg.docx, supplied by the user.
+A byte-identical reference copy is Working-paper/Submitted-report.docx.
+The submitted document has not been edited. This note and the R package were
+updated on 2026-11-06 in response to the request for minimal alignment.
+
+Did the report use Google Trends or financial stress data?
+--------------------------------------------------------
+No. Section 5.1 defines 20 fan tokens and BTC, ETH and CHZ. Sections 5.2-5.3
+describe daily USD prices, log returns, OHLC fields, reported trading volume,
+30-day volatility and provider validation. Neither Google Trends/search-volume
+data nor a financial-stress index appears as a project input or estimated
+regressor. Discussion of sentiment/fan attention is economic interpretation,
+not measurement from an attention dataset. BTC/ETH/CHZ are market benchmarks,
+not substitutes for a financial-stress index.
+
+Two different specifications coexist in the submitted document
+-------------------------------------------------------------
+The methodology chapter proposes further work. The Phase 3 results and its
+Methods and decision rules table describe what was actually implemented.
+For a minimal alignment, the default R profile follows that completed Phase 3
+scope and keeps the paper's actual R detection algorithms. Proposed extensions
+are not silently represented as completed estimates.
+
+Topic                       Methodology proposal         Reported Phase 3
+Daily input                 Log adjusted prices           Daily log prices
+ADF augmentation            BIC/Schwert selection          Zero lag differences
+Calibration                 999 wild bootstraps            Interpolated reference tables
+Episode persistence         5 days; 3/7/14 sensitivity     30 consecutive days
+Regime analysis             Sequential KS-CPM              Penalized mean/log-square shifts
+Bayesian model              NIG return change points       Normal-prior local ADF slope
+Hazard/run-length prior      90; 30/180 sensitivity         365 days
+Panel modelling             Hierarchical dynamic logit     Pooled models left to future work
+Study windows               Frozen September panel         June primary; September extension
+
+Default R alignment
+-------------------
+1. Daily log adjusted closing prices, not monthly averages, are the analysis
+   input. The existing raw archives, 20-token selection, and USD/UTC conventions
+   are unchanged. Daily adjusted close equals close in these archived crypto
+   responses; validation verifies this rather than assuming it.
+2. Every token and all three BTC/ETH/CHZ benchmarks are independently estimated
+   through 2026-06-30 and 2026-09-19. No September observation enters the June
+   estimation or its Bayesian scaling. Benchmark return correlations are
+   reported at both cutoffs; no financial-stress variable is introduced.
+3. Recursive statistics use exuber 1.1.0 radf(), the methodology paper's actual
+   R implementation, on daily log prices with an intercept and zero lagged
+   differences. The submitted PSY minimum window counts price observations;
+   exuber's minw counts regression rows. Therefore minw is the submitted
+   floor((0.01+1.8/sqrt(n))*n) minus one. The explicit conversion preserves the
+   original regression sample and prevents a one-observation porting error.
+4. To keep the submitted results comparable, reference values are read from
+   Configuration/reported_reference_values.csv, copied from the source code
+   underlying the submitted Phase 3. The same interpolation/extrapolation and
+   SADF-based endpoint approximation are used. They are clearly labeled
+   approximate reference classifications, not bootstrap p-values or matched
+   BSADF simulated critical values. No p-value is invented. The original R
+   calibration methods remain in the optional paper extension profile.
+5. BSADF statistics above the reported endpoint reference must persist for at
+   least 30 consecutive days to form a retained interval. Gaps are not bridged,
+   adjacent threshold failures are not merged, and prices are not forward-filled.
+   Price direction and interval price change accompany the statistical signal.
+   A falling price path is not automatically described as an upward bubble.
+6. The core methodology paper's cpm::processStream with Kolmogorov-Smirnov is
+   retained on daily log returns, ARL0=500, startup=max(30,ceil(20% of valid
+   return observations)). ARL0=1000 is included as the methodology chapter's
+   sensitivity setting. This deliberately differs from Phase 3's penalized
+   return-mean/log-squared-return segmentation. Its change counts and the
+   report's 76.8% volatility-shift statistic are not interchangeable.
+7. The Bayesian component is a base-R port of the LOCAL ADF model actually
+   used in the submitted Phase 3: normal coefficient priors, slope prior SD
+   0.5, fixed standardized innovation variance, expected run length 365 days,
+   posterior reset probabilities and positive-slope probabilities. It does not
+   replace this model with the paper's BSTS price forecast, nor claim the
+   proposed normal-inverse-gamma or hierarchical model was fitted. Full-sample
+   scaling is repeated independently within each cutoff, and is explicitly
+   retrospective, as acknowledged in the submitted limitations.
+
+What is excluded from the default project results
+------------------------------------------------
+Google Trends, a financial-stress index, sentiment-density analysis, ARIMAX,
+ARIMA/BSTS price forecasting, Johansen/VECM and multivariate VAR propagation
+are not required to replicate this submitted empirical scope. The R code and
+earlier outputs for the additional paper sections are preserved as optional
+extensions, accessible via run_paper_extensions.R and Paper-extensions.Rmd.
+They are not labeled missing project tasks or used to support report claims.
+
+The proposed wild-bootstrap/BIC/volatility-rescaled/long-memory corrections,
+NIG Bayesian return model and hierarchical dynamic logit are recorded as
+proposed, not reported as implemented. Adding them would be a substantive
+extension rather than the minimal alignment requested here.
+
+Verification and output locations
+---------------------------------
+Results/Report-aligned/ holds daily R statistics, persistent intervals, sequential
+KS changes, local-ADF probabilities, benchmark correlations and sample comparison.
+Processed-data/daily_panel_2026-06-30.csv and daily_panel_2026-09-19.csv are the
+exact daily analysis snapshots. Figures/Report-aligned/ contains combined
+price/BSADF/Bayesian plots at both cutoffs. Code.Rmd/Code.html show these results.
+validate_report_alignment.R checks the original observation counts, recursive
+statistics, 9/20 versus 10/20 nominal GSADF counts, 0 versus 2 retained intervals,
+and Bayesian probabilities against the archived code outputs underlying the
+submission. It checks the official R package statistics and calendar indexing.
+The submitted penalized change-point counts are preserved only as provenance;
+they are not forced onto the different KS-CPM model.
+
+Core paper provenance
+---------------------
+Original-paper/ remains untouched. The paper's actual R packages, original
+Code-and-Data/Working-paper layout, raw data, processed data and README.txt are
+retained. Working-paper/Methodology.txt describes the earlier optional paper
+profile; this Report-alignment.txt controls the default submitted-report profile.

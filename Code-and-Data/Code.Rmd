@@ -1,0 +1,153 @@
+---
+title: "Bubble Detection and Dating in Fan Tokens"
+subtitle: "R analysis aligned with the submitted Phase 3 report"
+author: "FRAM Group G07"
+output:
+  html_document:
+    toc: true
+    number_sections: true
+params:
+  regenerate: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+source("R/common.R")
+source("R/06_report_alignment.R")
+```
+
+# Study scope
+
+The submitted report uses daily token prices, returns, trading volume and
+Bitcoin, Ethereum and Chiliz benchmarks. It does not use Google Trends or a
+financial-stress index. The default R workflow follows its completed Phase 3
+scope while retaining the original methodology paper's R detection packages.
+The original repository and optional additional paper analyses remain included.
+
+The primary sample ends on 30 June 2026, with an extension through 19 September
+2026. Each cutoff is estimated independently. All 20 fan tokens and all three
+benchmarks retain their own first valid trading dates. Input prices are adjusted
+daily USD closes on a UTC calendar, with no forward-filling or winsorization.
+
+The methodology chapter and completed Phase 3 use different specifications.
+The latter uses zero-lag regressions, approximate reference thresholds, a 30-day
+dating rule and a local-ADF Bayesian model. The default follows those choices;
+it does not claim the proposed bootstrap or hierarchical models were fitted.
+See `../Working-paper/Report-alignment.txt` for the comparison.
+
+# Libraries and execution
+
+The core detection methods use the paper's `exuber` 1.1.0 and `cpm` 2.3 packages.
+The Bayesian local-ADF extension is implemented in base R. JSON parsing uses
+`jsonlite`; file verification uses `digest`. No Python process is invoked.
+
+```{r regenerate, eval=params$regenerate}
+source("run_all.R")
+```
+
+The default render displays included outputs. Set `regenerate=TRUE` to execute
+the complete analysis while knitting, or run `Rscript run_all.R` first.
+
+# Data processing
+
+`R/01_process_data.R` reconstructs daily data from all archived provider JSON
+responses, checks dates and duplicate prices, flags invalid observations and
+calculates adjacent-day log returns and 30-day volatility. The daily analysis
+snapshots are saved as `Processed-data/daily_panel_2026-06-30.csv` and
+`Processed-data/daily_panel_2026-09-19.csv`. Monthly/weekly datasets remain
+available for optional paper extensions and are not inputs to this daily run.
+
+```{r sample}
+knitr::kable(read_table(file.path(report_dir, "sample_comparison.csv")))
+```
+
+# Recursive detection and episode dating
+
+`exuber::radf()` is applied to daily log adjusted prices with an intercept and
+zero lagged differences. Its minimum-window argument counts regression rows;
+the reported PSY window counts price observations, so an explicit one-row
+conversion preserves the submitted estimation windows.
+
+The original reference-table interpolation/extrapolation and SADF-based endpoint
+approximation are retained for comparison with Phase 3. These outputs are
+nominal reference classifications, not bootstrap p-values or matched BSADF
+simulated critical values. At least 30 consecutive daily exceedances are
+required for a retained interval. A statistical interval can accompany a price
+decline, so its price change is reported explicitly.
+
+```{r recursive-statistics}
+t <- read_table(file.path(report_dir, "psy_test_summary.csv"))
+knitr::kable(t[t$asset_type == "fan_token", c("cutoff_date", "symbol", "observations", "sadf_statistic", "gsadf_statistic", "gsadf_cv_95", "gsadf_reject_95", "longest95_run")], digits = 4)
+```
+
+```{r persistent-intervals}
+knitr::kable(read_table(file.path(report_dir, "psy_persistent_intervals.csv")), digits = 4)
+```
+
+# Sequential distribution changes
+
+The methodology paper's actual `cpm::processStream()` Kolmogorov-Smirnov model
+is applied to daily log returns. Startup uses 20% of the valid return sample,
+rounded upward, with a minimum of 30 observations. ARL0 is 500, with 1000 as a
+sensitivity check. Estimated change dates and subsequent detection dates are
+exported separately.
+
+This preserves the paper's nonparametric sequential method. The submitted
+Phase 3 instead used penalized segmentation of mean and log squared returns.
+Their change counts differ; the submitted 76.8% volatility-shift result is not
+recomputed or attributed to KS-CPM.
+
+```{r ks-changes}
+knitr::kable(read_table(file.path(report_dir, "ks_cpm_change_points.csv")))
+```
+
+# Bayesian diagnostics and benchmark comparisons
+
+The local-ADF model actually used in Phase 3 is ported to base R: normal
+coefficient priors, slope-prior standard deviation 0.5, standardized innovation
+variance fixed at one and expected run length 365 days. It exports reset and
+positive-slope probabilities. Full-sample scaling is retrospective within each
+cutoff. It is distinct from both the paper's BSTS forecasts and the methodology
+chapter's proposed normal-inverse-gamma return model.
+
+Daily return correlations compare every fan token against BTC, ETH and CHZ.
+They describe co-movement and do not establish causality.
+
+```{r benchmark-comparisons}
+knitr::kable(read_table(file.path(report_dir, "benchmark_return_correlations.csv")), digits = 4)
+```
+
+```{r daily-diagnostics, echo=FALSE, out.width="100%"}
+knitr::include_graphics(list.files(report_figure_dir, pattern = "[.]png$", full.names = TRUE))
+```
+
+# Results and verification
+
+```{r generated-summary, echo=FALSE, results='asis'}
+cat("```text\n", paste(readLines(file.path(report_dir, "RESULTS.txt")), collapse = "\n"), "\n```\n", sep = "")
+```
+
+Validation compares the R recursive statistics, original sample counts,
+persistent intervals and local-ADF probabilities against the archived outputs
+underlying the submission. KS-CPM is checked as its own model and is not forced
+to reproduce penalized-segmentation counts. Raw inputs and the submitted Word
+document are retained unchanged.
+
+```{r method-scope}
+knitr::kable(read_table("Results/method_status.csv"))
+```
+
+# Optional original paper extensions
+
+`run_paper_extensions.R` and `Paper-extensions.Rmd` preserve the earlier monthly
+and weekly paper profile, ARIMA/BSTS forecasting and benchmark Johansen/VECM.
+Those results remain separate from this submitted-report analysis. Google
+Trends, sentiment density analysis and financial-stress propagation belong to
+additional original-paper sections; they are outside this project's submitted
+empirical scope. The complete original R source is in `../Original-paper/`.
+
+# Session
+
+```{r session}
+sessionInfo()
+```

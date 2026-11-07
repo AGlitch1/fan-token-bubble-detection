@@ -1,0 +1,14 @@
+
+------------------------------------------
+-          Superior Set of Models        -
+------------------------------------------
+      Rank_M       v_M  MCS_M Rank_R       v_R  MCS_R       Loss
+ARIMA      1 -1.814483 1.0000      1 -1.814483 1.0000 0.04549856
+BSTS       2  1.814483 0.0714      2  1.814483 0.0714 0.06632269
+
+Details
+------------------------------------------
+
+Number of eliminated models	:	0
+Statistic	:	TR
+Elapsed Time	:	Time difference of 0.4948471 secs

@@ -1,0 +1,17 @@
+#!/usr/bin/env Rscript
+# Run from ANY working directory; all paths are relative to this script.
+args <- commandArgs(trailingOnly = FALSE)
+script <- sub("^--file=", "", args[grepl("^--file=", args)])
+if (length(script)) setwd(dirname(normalizePath(script)))
+source("R/common.R")
+check_packages()
+for (file in c("01_process_data.R", "02_detection.R", "03_propagation.R", "04_forecasting.R", "05_report.R")) source(file.path("R", file))
+started <- Sys.time()
+message("Rebuilding fan-token data from frozen provider JSON (offline)")
+data <- process_data()
+run_detection(data)
+run_propagation(data)
+run_forecasting(data)
+source("validate_paper_extensions.R")
+write_report(data, started)
+message("Completed optional paper extensions. See README-paper-extensions.txt")

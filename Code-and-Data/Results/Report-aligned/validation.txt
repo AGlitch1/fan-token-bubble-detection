@@ -1,0 +1,164 @@
+REPORT ALIGNMENT VALIDATION
+PASS unique daily asset/date keys
+PASS 20 fan tokens
+PASS BTC/ETH/CHZ benchmarks retained
+PASS archived crypto adjusted prices equal closes used in submitted results
+PASS ac-milan-fan-token complete daily calendar
+PASS ac-milan-fan-token returns use adjacent adjusted log prices
+PASS alpine-f1-team-fan-token complete daily calendar
+PASS alpine-f1-team-fan-token returns use adjacent adjusted log prices
+PASS argentine-football-association-fan-token complete daily calendar
+PASS argentine-football-association-fan-token returns use adjacent adjusted log prices
+PASS arsenal-fan-token complete daily calendar
+PASS arsenal-fan-token returns use adjacent adjusted log prices
+PASS as-roma-fan-token complete daily calendar
+PASS as-roma-fan-token returns use adjacent adjusted log prices
+PASS atletico-madrid complete daily calendar
+PASS atletico-madrid returns use adjacent adjusted log prices
+PASS bitcoin complete daily calendar
+PASS bitcoin returns use adjacent adjusted log prices
+PASS chiliz complete daily calendar
+PASS chiliz returns use adjacent adjusted log prices
+PASS croatian-ff-fan-token complete daily calendar
+PASS croatian-ff-fan-token returns use adjacent adjusted log prices
+PASS ethereum complete daily calendar
+PASS ethereum returns use adjacent adjusted log prices
+PASS fc-barcelona-fan-token complete daily calendar
+PASS fc-barcelona-fan-token returns use adjacent adjusted log prices
+PASS fc-porto complete daily calendar
+PASS fc-porto returns use adjacent adjusted log prices
+PASS galatasaray-fan-token complete daily calendar
+PASS galatasaray-fan-token returns use adjacent adjusted log prices
+PASS inter-milan-fan-token complete daily calendar
+PASS inter-milan-fan-token returns use adjacent adjusted log prices
+PASS juventus-fan-token complete daily calendar
+PASS juventus-fan-token returns use adjacent adjusted log prices
+PASS lazio-fan-token complete daily calendar
+PASS lazio-fan-token returns use adjacent adjusted log prices
+PASS manchester-city-fan-token complete daily calendar
+PASS manchester-city-fan-token returns use adjacent adjusted log prices
+PASS napoli-fan-token complete daily calendar
+PASS napoli-fan-token returns use adjacent adjusted log prices
+PASS og-fan-token complete daily calendar
+PASS og-fan-token returns use adjacent adjusted log prices
+PASS paris-saint-germain-fan-token complete daily calendar
+PASS paris-saint-germain-fan-token returns use adjacent adjusted log prices
+PASS portugal-national-team-fan-token complete daily calendar
+PASS portugal-national-team-fan-token returns use adjacent adjusted log prices
+PASS santos-fc-fan-token complete daily calendar
+PASS santos-fc-fan-token returns use adjacent adjusted log prices
+PASS trabzonspor-fan-token complete daily calendar
+PASS trabzonspor-fan-token returns use adjacent adjusted log prices
+PASS 23 assets independently estimated at both cutoffs
+PASS daily threshold crossings are exported correctly
+PASS retained intervals satisfy submitted 30-day persistence rule
+PASS KS detection occurs after estimated change
+PASS daily KS primary and sensitivity ARLs are present
+PASS Bayesian slope probabilities bounded by zero and one
+PASS 2026-06-30_bitcoin_1 export matches actual exuber model
+PASS 2026-06-30_bitcoin_1 daily endpoint indexing is correct
+PASS 2026-06-30_ethereum_1 export matches actual exuber model
+PASS 2026-06-30_ethereum_1 daily endpoint indexing is correct
+PASS 2026-06-30_chiliz_1 export matches actual exuber model
+PASS 2026-06-30_chiliz_1 daily endpoint indexing is correct
+PASS 2026-06-30_croatian-ff-fan-token_1 export matches actual exuber model
+PASS 2026-06-30_croatian-ff-fan-token_1 daily endpoint indexing is correct
+PASS 2026-06-30_og-fan-token_1 export matches actual exuber model
+PASS 2026-06-30_og-fan-token_1 daily endpoint indexing is correct
+PASS 2026-06-30_atletico-madrid_1 export matches actual exuber model
+PASS 2026-06-30_atletico-madrid_1 daily endpoint indexing is correct
+PASS 2026-06-30_santos-fc-fan-token_1 export matches actual exuber model
+PASS 2026-06-30_santos-fc-fan-token_1 daily endpoint indexing is correct
+PASS 2026-06-30_paris-saint-germain-fan-token_1 export matches actual exuber model
+PASS 2026-06-30_paris-saint-germain-fan-token_1 daily endpoint indexing is correct
+PASS 2026-06-30_fc-barcelona-fan-token_1 export matches actual exuber model
+PASS 2026-06-30_fc-barcelona-fan-token_1 daily endpoint indexing is correct
+PASS 2026-06-30_as-roma-fan-token_1 export matches actual exuber model
+PASS 2026-06-30_as-roma-fan-token_1 daily endpoint indexing is correct
+PASS 2026-06-30_galatasaray-fan-token_1 export matches actual exuber model
+PASS 2026-06-30_galatasaray-fan-token_1 daily endpoint indexing is correct
+PASS 2026-06-30_fc-porto_1 export matches actual exuber model
+PASS 2026-06-30_fc-porto_1 daily endpoint indexing is correct
+PASS 2026-06-30_manchester-city-fan-token_1 export matches actual exuber model
+PASS 2026-06-30_manchester-city-fan-token_1 daily endpoint indexing is correct
+PASS 2026-06-30_lazio-fan-token_1 export matches actual exuber model
+PASS 2026-06-30_lazio-fan-token_1 daily endpoint indexing is correct
+PASS 2026-06-30_juventus-fan-token_1 export matches actual exuber model
+PASS 2026-06-30_juventus-fan-token_1 daily endpoint indexing is correct
+PASS 2026-06-30_ac-milan-fan-token_1 export matches actual exuber model
+PASS 2026-06-30_ac-milan-fan-token_1 daily endpoint indexing is correct
+PASS 2026-06-30_arsenal-fan-token_1 export matches actual exuber model
+PASS 2026-06-30_arsenal-fan-token_1 daily endpoint indexing is correct
+PASS 2026-06-30_alpine-f1-team-fan-token_1 export matches actual exuber model
+PASS 2026-06-30_alpine-f1-team-fan-token_1 daily endpoint indexing is correct
+PASS 2026-06-30_inter-milan-fan-token_1 export matches actual exuber model
+PASS 2026-06-30_inter-milan-fan-token_1 daily endpoint indexing is correct
+PASS 2026-06-30_trabzonspor-fan-token_1 export matches actual exuber model
+PASS 2026-06-30_trabzonspor-fan-token_1 daily endpoint indexing is correct
+PASS 2026-06-30_argentine-football-association-fan-token_1 export matches actual exuber model
+PASS 2026-06-30_argentine-football-association-fan-token_1 daily endpoint indexing is correct
+PASS 2026-06-30_napoli-fan-token_1 export matches actual exuber model
+PASS 2026-06-30_napoli-fan-token_1 daily endpoint indexing is correct
+PASS 2026-06-30_portugal-national-team-fan-token_1 export matches actual exuber model
+PASS 2026-06-30_portugal-national-team-fan-token_1 daily endpoint indexing is correct
+PASS 2026-09-19_bitcoin_1 export matches actual exuber model
+PASS 2026-09-19_bitcoin_1 daily endpoint indexing is correct
+PASS 2026-09-19_ethereum_1 export matches actual exuber model
+PASS 2026-09-19_ethereum_1 daily endpoint indexing is correct
+PASS 2026-09-19_chiliz_1 export matches actual exuber model
+PASS 2026-09-19_chiliz_1 daily endpoint indexing is correct
+PASS 2026-09-19_croatian-ff-fan-token_1 export matches actual exuber model
+PASS 2026-09-19_croatian-ff-fan-token_1 daily endpoint indexing is correct
+PASS 2026-09-19_og-fan-token_1 export matches actual exuber model
+PASS 2026-09-19_og-fan-token_1 daily endpoint indexing is correct
+PASS 2026-09-19_atletico-madrid_1 export matches actual exuber model
+PASS 2026-09-19_atletico-madrid_1 daily endpoint indexing is correct
+PASS 2026-09-19_santos-fc-fan-token_1 export matches actual exuber model
+PASS 2026-09-19_santos-fc-fan-token_1 daily endpoint indexing is correct
+PASS 2026-09-19_paris-saint-germain-fan-token_1 export matches actual exuber model
+PASS 2026-09-19_paris-saint-germain-fan-token_1 daily endpoint indexing is correct
+PASS 2026-09-19_fc-barcelona-fan-token_1 export matches actual exuber model
+PASS 2026-09-19_fc-barcelona-fan-token_1 daily endpoint indexing is correct
+PASS 2026-09-19_as-roma-fan-token_1 export matches actual exuber model
+PASS 2026-09-19_as-roma-fan-token_1 daily endpoint indexing is correct
+PASS 2026-09-19_galatasaray-fan-token_1 export matches actual exuber model
+PASS 2026-09-19_galatasaray-fan-token_1 daily endpoint indexing is correct
+PASS 2026-09-19_fc-porto_1 export matches actual exuber model
+PASS 2026-09-19_fc-porto_1 daily endpoint indexing is correct
+PASS 2026-09-19_manchester-city-fan-token_1 export matches actual exuber model
+PASS 2026-09-19_manchester-city-fan-token_1 daily endpoint indexing is correct
+PASS 2026-09-19_lazio-fan-token_1 export matches actual exuber model
+PASS 2026-09-19_lazio-fan-token_1 daily endpoint indexing is correct
+PASS 2026-09-19_juventus-fan-token_1 export matches actual exuber model
+PASS 2026-09-19_juventus-fan-token_1 daily endpoint indexing is correct
+PASS 2026-09-19_ac-milan-fan-token_1 export matches actual exuber model
+PASS 2026-09-19_ac-milan-fan-token_1 daily endpoint indexing is correct
+PASS 2026-09-19_arsenal-fan-token_1 export matches actual exuber model
+PASS 2026-09-19_arsenal-fan-token_1 daily endpoint indexing is correct
+PASS 2026-09-19_alpine-f1-team-fan-token_1 export matches actual exuber model
+PASS 2026-09-19_alpine-f1-team-fan-token_1 daily endpoint indexing is correct
+PASS 2026-09-19_inter-milan-fan-token_1 export matches actual exuber model
+PASS 2026-09-19_inter-milan-fan-token_1 daily endpoint indexing is correct
+PASS 2026-09-19_trabzonspor-fan-token_1 export matches actual exuber model
+PASS 2026-09-19_trabzonspor-fan-token_1 daily endpoint indexing is correct
+PASS 2026-09-19_argentine-football-association-fan-token_1 export matches actual exuber model
+PASS 2026-09-19_argentine-football-association-fan-token_1 daily endpoint indexing is correct
+PASS 2026-09-19_napoli-fan-token_1 export matches actual exuber model
+PASS 2026-09-19_napoli-fan-token_1 daily endpoint indexing is correct
+PASS 2026-09-19_portugal-national-team-fan-token_1 export matches actual exuber model
+PASS 2026-09-19_portugal-national-team-fan-token_1 daily endpoint indexing is correct
+PASS 2026-06-30 fan-token observation count agrees with submitted report
+PASS 2026-06-30 R SADF agrees with submitted numerical analysis
+PASS 2026-06-30 R GSADF agrees with submitted numerical analysis
+PASS 2026-06-30 GSADF reference counts agree with submitted report
+PASS 2026-06-30 persistent-interval counts agree with submitted report
+PASS 2026-09-19 fan-token observation count agrees with submitted report
+PASS 2026-09-19 R SADF agrees with submitted numerical analysis
+PASS 2026-09-19 R GSADF agrees with submitted numerical analysis
+PASS 2026-09-19 GSADF reference counts agree with submitted report
+PASS 2026-09-19 persistent-interval counts agree with submitted report
+PASS Bayesian local-ADF dates agree with submitted September analysis
+PASS R Bayesian slope probabilities agree with submitted model within CDF numerical tolerance
+PASS R Bayesian reset probabilities agree with submitted model
+PASS all fan tokens compared against all three benchmarks at each cutoff
+162 checks passed.

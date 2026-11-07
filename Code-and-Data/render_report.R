@@ -1,0 +1,11 @@
+#!/usr/bin/env Rscript
+args <- commandArgs(trailingOnly = FALSE)
+script <- sub("^--file=", "", args[grepl("^--file=", args)])
+if (length(script)) setwd(dirname(normalizePath(script)))
+source("R/common.R")
+if (!file.exists("Results/RESULTS.txt")) stop("Run run_all.R first")
+source("R/06_report_alignment.R")
+refresh_report_figures()
+rmarkdown::render("Code.Rmd", params = list(regenerate = FALSE), quiet = TRUE)
+source("R/05_report.R")
+write_inventory()

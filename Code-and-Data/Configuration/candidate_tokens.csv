@@ -1,0 +1,23 @@
+candidate_rank,coingecko_id,symbol,name,yahoo_symbol,screening_status,screening_note
+1,croatian-ff-fan-token,VATRENI,Croatian Football Federation Token,VATRENI-USD,eligible,Top eligible CoinGecko Fan Token category asset at the fixed snapshot
+2,og-fan-token,OG,OG Fan Token,OG-USD,eligible,Top eligible CoinGecko Fan Token category asset at the fixed snapshot
+3,atletico-madrid,ATM,Atletico Madrid Fan Token,ATM-USD,eligible,Top eligible CoinGecko Fan Token category asset at the fixed snapshot
+4,santos-fc-fan-token,SANTOS,Santos FC Fan Token,SANTOS-USD,eligible,Top eligible CoinGecko Fan Token category asset at the fixed snapshot
+5,paris-saint-germain-fan-token,PSG,Paris Saint-Germain Fan Token,PSG-USD,eligible,Top eligible CoinGecko Fan Token category asset at the fixed snapshot
+6,fc-barcelona-fan-token,BAR,FC Barcelona Fan Token,BAR-USD,eligible,Top eligible CoinGecko Fan Token category asset at the fixed snapshot
+7,as-roma-fan-token,ASR,AS Roma Fan Token,ASR-USD,eligible,Top eligible CoinGecko Fan Token category asset at the fixed snapshot
+8,galatasaray-fan-token,GAL,Galatasaray Fan Token,GAL-USD,eligible,Top eligible CoinGecko Fan Token category asset at the fixed snapshot
+9,fight-2,FIGHT,FIGHT,FIGHT-USD,excluded,Insufficient daily history at the sample cutoff
+10,fc-porto,PORTO,FC Porto Fan Token,PORTO-USD,eligible,Top eligible CoinGecko Fan Token category asset at the fixed snapshot
+11,manchester-city-fan-token,CITY,Manchester City Fan Token,CITY10049-USD,eligible,Yahoo symbol uses a numeric suffix to avoid a ticker collision
+12,lazio-fan-token,LAZIO,Lazio Fan Token,LAZIO-USD,eligible,Top eligible CoinGecko Fan Token category asset at the fixed snapshot
+13,juventus-fan-token,JUV,Juventus Fan Token,JUV-USD,eligible,Top eligible CoinGecko Fan Token category asset at the fixed snapshot
+14,ac-milan-fan-token,ACM,AC Milan Fan Token,ACM8538-USD,eligible,Yahoo symbol uses a numeric suffix to avoid a ticker collision
+15,arsenal-fan-token,AFC,Arsenal Fan Token,AFC11532-USD,eligible,Yahoo symbol uses a numeric suffix to avoid a ticker collision
+16,alpine-f1-team-fan-token,ALPINE,Alpine F1 Team Fan Token,ALPINE-USD,eligible,Top eligible CoinGecko Fan Token category asset at the fixed snapshot
+17,inter-milan-fan-token,INTER,Inter Milan Fan Token,INTER-USD,eligible,Top eligible CoinGecko Fan Token category asset at the fixed snapshot
+18,trabzonspor-fan-token,TRA,Trabzonspor Fan Token,TRA-USD,eligible,Top eligible CoinGecko Fan Token category asset at the fixed snapshot
+19,argentine-football-association-fan-token,ARG,Argentine Football Association Fan Token,ARG-USD,eligible,Top eligible CoinGecko Fan Token category asset at the fixed snapshot
+20,napoli-fan-token,NAP,Napoli Fan Token,NAP-USD,eligible,Top eligible CoinGecko Fan Token category asset at the fixed snapshot
+21,blockchainspace,GUILD,BlockchainSpace,GUILD-USD,excluded,Not issued by a sporting organisation or team
+22,portugal-national-team-fan-token,POR,Portugal National Team Fan Token,POR-USD,eligible,Replacement for excluded category entries to retain 20 eligible fan tokens

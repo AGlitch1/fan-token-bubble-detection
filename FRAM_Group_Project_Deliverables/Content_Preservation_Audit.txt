@@ -1,0 +1,67 @@
+CONTENT PRESERVATION AUDIT
+
+Original report: FRAM ASSIGNMENT_SEM 1, 2026-27_Abhav_Garg.docx
+Original SHA-256: 06a8e07a5377b07d1148b1dea5b7114184c0fb56b015230d4add4ddf094eada4
+Original report word count: 8,926
+Substantive research prose rewritten: 0
+Existing main report text, tables, equations and original figures: unchanged in this appendix update.
+Original additions remain two transition paragraphs, totaling 103 words.
+Appendix: six subsections, nine supplementary figures and short captions; no discussion paragraphs.
+New appendix headings, captions and source credit: 80 words.
+New figure annotations, including legends, units and token labels: 158 words.
+Numeric axis ticks and plotted dates are data, excluded from prose-word accounting.
+
+CHECK 1: CONSERVATIVE NATIVE REPORT TEXT
+The original conservative calculation counts all old and new words in every changed heading/caption
+block, removed cover labels, and all original additions. The appendix adds only new text.
+Original conservative total: 794
+Appendix native text: 80
+Combined: 874 / 8926 = 9.792%
+Result: PASS, below 10 percent.
+
+CHECK 2: ALL EDITED TEXT INCLUDING FIGURE ANNOTATIONS
+This check counts both deleted and inserted tokens in changed headings/captions, all removed cover
+tokens, all added report text, and every new non-data label inside the figures. Unchanged tokens in
+reformatted headings are not counted as edits. No main-report prose has been rewritten.
+Old and new changed heading/caption tokens: 111
+Original added tokens: 121
+Removed cover/repeated-heading tokens: 28
+Appendix native tokens: 80
+Figure annotation tokens: 158
+Combined: 498 / 8926 = 5.579%
+Result: PASS, below 10 percent.
+
+EXACT NEW APPENDIX TEXT
+
+Appendix A Supplementary Figures and Diagnostic Results
+Source: archived project data and results.
+A.1 Price and volatility
+A.2 BSADF diagnostics
+A.3 Return change points
+A.4 Bayesian probabilities
+A.5 Benchmark comparisons
+A.6 June and September comparisons
+Figure A.1 Token profiles 1-10.
+Figure A.2 Token profiles 11-20.
+Figure A.3 BSADF paths 1-10.
+Figure A.4 BSADF paths 11-20.
+Figure A.5 Change-point dates.
+Figure A.6 Bayesian paths 1-10.
+Figure A.7 Bayesian paths 11-20.
+Figure A.8 BTC ETH and CHZ.
+Figure A.9 POR and ARG.
+
+ORIGINAL TRANSITION PARAGRAPHS
+
+The literature review and research gaps establish the basis for the study objectives. The following sections carry these objectives into the proposed empirical framework and the description of the fan-token panel.
+The preceding methodology records the proposed design developed in Phase 2. The empirical analysis in Phase 3 uses the implemented settings reported below, including published reference thresholds, a 30-day dating rule, segmented return series and a local Bayesian ADF model. The proposed wild bootstrap, sequential KS-CPM validation and hierarchical predictor model should therefore be read as planned extensions rather than completed results. The June analysis and September extension retain their respective cutoffs.
+
+FINAL VERIFICATION
+Main-report Word XML and all original embedded images match the pre-appendix report.
+The first 24 Word pages and first 22 LaTeX pages render identically to the previous delivery.
+All nine appendix pages visually inspected in each format; no clipped plots or captions.
+Final Word render: 33 pages; final LaTeX PDF: 31 pages.
+LaTeX compiled twice with no missing glyphs, overfull boxes or unresolved references.
+Original core paper remains byte-identical to the supplied file.
+Stored recursive test statistics agree with the original June results within 1e-9.
+Stored Bayesian probability summaries agree within 1e-6.

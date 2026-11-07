@@ -1,0 +1,24 @@
+FAN-TOKEN R RESULTS ALIGNED WITH THE SUBMITTED PHASE 3 SCOPE
+
+Daily log adjusted USD prices; 20 fan tokens plus BTC/ETH/CHZ.
+Primary cutoff 2026-06-30; extension cutoff 2026-09-19; 30 consecutive days for retained intervals.
+
+ cutoff_date assets fan_token_prices gsadf_reference_exceedances
+  2026-06-30     23            37662                           9
+  2026-09-19     23            39282                          10
+ fan_persistent_intervals ks_change_points_arl500 fan_bayesian_days_ge95
+                        0                     114                      5
+                        2                     119                      4
+
+The report does not use Google Trends or a financial-stress index. These are outside its scope.
+The R workflow retains exuber::radf and cpm::processStream from the methodology paper.
+The submitted reference-table interpolation and SADF-based dating approximation are retained for comparability.
+These are nominal reference classifications, not bootstrap p-values or matched BSADF critical values.
+Daily Bayesian local-ADF probabilities follow the submitted Phase 3 model and use retrospective full-sample scaling.
+KS-CPM replaces the submitted penalized mean-shift segmentation to preserve the paper's core method.
+Its counts must not be read as reproducing the report's 76.8% volatility-shift statistic.
+Proposed BIC/wild-bootstrap/NIG/hierarchical extensions are not claimed as implemented results.
+ARIMA/BSTS, Johansen/VECM and monthly/weekly analyses are preserved as optional paper extensions.
+See Working-paper/Report-alignment.txt for the complete scope comparison.
+
+162 checks passed.

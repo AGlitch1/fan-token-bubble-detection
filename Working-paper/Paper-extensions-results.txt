@@ -1,0 +1,51 @@
+FAN-TOKEN R REPLICATION: GENERATED RESULTS
+
+Generated (UTC): 2026-11-06 16:35:00 UTC
+R: R version 4.5.2 (2025-10-31)
+Elapsed minutes: 5.96
+
+Frozen sample: 20 fan tokens and 3 benchmarks.
+Daily calendar rows: 47558. Valid observed prices: 47558.
+Daily cutoff: 2026-09-19 | Last complete modeled month: 2026-08-01
+GSADF rejections at 95%: 2 of 20 eligible token blocks.
+Package-dated 95% euphoric episodes: 3. Monthly KS change points: 1.
+Forecasts per model: 553; token-specific holdouts range from 10 to 37 months.
+
+Forecast accuracy (median across assets; log-price RMSE and USD-price SMAPE):
+  ARIMA: median log RMSE 0.187385; median price SMAPE 13.477%
+  BSTS: median log RMSE 0.247472; median price SMAPE 19.806%
+
+INTERPRETATION AND LIMITS
+BSADF identifies statistical explosiveness, not a complete economic bubble life cycle.
+KS-CPM identifies distribution changes. Formation/burst/decline labels are not inferred automatically.
+Shorter fan-token histories require rescaled startup and forecast training windows (see Methodology.txt).
+Benchmark propagation uses BTC and CHZ, not the paper's financial-stress and oil variables.
+Johansen/VECM tables are conditional diagnostics; consult the unit-root tests before interpreting cointegration.
+No fan-token Google Trends or financial-stress dataset was supplied; affected paper claims remain unavailable.
+The legacy Python analysis is archived for provenance and is not the source of these R statistics.
+All numbers in this report are generated from the R result tables.
+
+METHOD STATUS
+                                       section                          status
+                     Daily data reconstruction                       COMPLETED
+                     Monthly exuber RADF/BSADF                       COMPLETED
+                                Monthly KS-CPM                       COMPLETED
+                      Weekly KS-CPM robustness                       COMPLETED
+               Benchmark Johansen/VECM and VAR                       COMPLETED
+               Expanding-window ARIMA and BSTS                       COMPLETED
+ Search-interest ARIMAX and density comparison               UNAVAILABLE_INPUT
+                  Financial-stress propagation               UNAVAILABLE_INPUT
+                     Paper simulation appendix ORIGINAL_CODE_AND_DATA_INCLUDED
+                                                                                                 detail
+                                                            Rebuilt from archived provider JSON using R
+                                                   Price levels; package Monte Carlo critical sequences
+                                                     Nonparametric sequential distribution-change model
+                                                                      Weekly mean prices with ARL0=5000
+                                        Adapted token/BTC/CHZ system; does not measure financial stress
+                                                  Paper package specifications and 1000 BSTS MCMC draws
+                                  No fan-token Google Trends dataset supplied; no synthetic values used
+                              No FSI series supplied; no market benchmark relabeled as financial stress
+ Original-paper/Code-and-Data/Code.Rmd preserves the original appendix; not rerun for fan-token results
+
+VALIDATION
+1656 checks passed.

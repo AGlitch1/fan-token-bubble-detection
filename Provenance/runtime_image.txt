@@ -1,0 +1,7 @@
+Validated R runtime image
+Original tag: gianvriz/green_bubbles:latest
+Image ID: sha256:39586b764cbd2260aa0dbeed20cd16dd87b0833e97e6ce5210ae5f101af9c251
+Repository digest: gianvriz/green_bubbles@sha256:39586b764cbd2260aa0dbeed20cd16dd87b0833e97e6ce5210ae5f101af9c251
+R version: 4.5.2 (2025-10-31)
+Execution: offline Docker container; only this package mounted read/write; host UID/GID 1000:1000.
+See Code-and-Data/Results/sessionInfo.txt and installed_packages.csv for the actual run.

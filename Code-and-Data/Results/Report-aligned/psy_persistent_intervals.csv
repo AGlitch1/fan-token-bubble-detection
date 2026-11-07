@@ -1,0 +1,5 @@
+"cutoff_date","asset_id","symbol","asset_type","block","start_date","end_date","peak_bsadf_date","duration_days","peak_bsadf","price_change_pct","ongoing","interpretation"
+"2026-06-30","chiliz","CHZ","benchmark",1,2021-03-02,2021-04-23,2021-03-12,53,8.1436461469213,555.873068342211,FALSE,"persistent reference-threshold signal; inspect price direction"
+"2026-09-19","chiliz","CHZ","benchmark",1,2021-03-02,2021-04-23,2021-03-12,53,8.1436461469213,555.873068342211,FALSE,"persistent reference-threshold signal; inspect price direction"
+"2026-09-19","argentine-football-association-fan-token","ARG","fan_token",1,2026-07-21,2026-08-23,2026-07-30,34,2.58284662408393,-44.1715097061221,FALSE,"persistent reference-threshold signal; inspect price direction"
+"2026-09-19","portugal-national-team-fan-token","POR","fan_token",1,2026-06-15,2026-09-19,2026-07-14,97,5.72206462302823,-69.8901713008105,TRUE,"persistent reference-threshold signal; inspect price direction"

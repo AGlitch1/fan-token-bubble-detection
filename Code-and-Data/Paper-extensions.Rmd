@@ -1,0 +1,172 @@
+---
+title: "Optional Paper Extensions for Fan Token Analysis"
+author: "FRAM group project; adapted from Gian Luca Vriz and Luigi Grossi"
+output:
+  html_document:
+    toc: true
+    number_sections: true
+params:
+  regenerate: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+source("R/common.R")
+for (f in c("01_process_data.R", "02_detection.R", "03_propagation.R", "04_forecasting.R", "05_report.R")) source(file.path("R", f))
+check_packages()
+started <- Sys.time()
+```
+
+# Libraries and provenance
+
+This is the optional monthly/weekly and forecasting profile. The submitted
+report's default daily analysis is in `Code.Rmd` and `Results/Report-aligned/`.
+Google Trends and financial stress are outside that submitted project scope.
+
+This notebook follows the original repository's R Markdown format. Its modular R
+source files are in `R/`; the complete original notebook, data, and MIT license
+are preserved in `../Original-paper/`. All analysis below is performed by R.
+
+The frozen project sample contains 20 fan tokens and Bitcoin, Ethereum, and
+Chiliz benchmarks, with a daily cutoff of 19 September 2026. The analytical
+monthly sample ends in August 2026, the last complete month. Partial final weeks
+are also omitted. No live market-data request is needed to reproduce results.
+
+```{r versions}
+data.frame(package = names(package_versions), version = unname(package_versions))
+```
+
+Set `params = list(regenerate = TRUE)` in `rmarkdown::render()` to execute every
+stage below. The default renders the included, validated result tables without
+refitting hundreds of forecasting models. `Rscript run_paper_extensions.R` is the direct
+command-line equivalent of a full regeneration.
+
+# Raw data and processing
+
+`R/01_process_data.R` parses all 23 archived Yahoo chart JSON responses, recovers
+UTC dates, clips the sample, checks duplicates, constructs daily calendars, and
+calculates returns only between adjacent valid daily prices. It flags extremes
+without deleting them. Monthly and weekly inputs are arithmetic mean prices,
+matching the original paper code. The first return of each modeling block is
+padded with zero, as in the original notebook.
+
+```{r process, eval=params$regenerate}
+data <- process_data()
+```
+
+```{r quality}
+knitr::kable(read_table("Results/data_quality.csv"))
+```
+
+# Detection phase
+
+The actual paper packages are used: `exuber::radf()` on monthly price levels,
+`exuber::radf_mc_cv()` for 1,000 finite-sample Monte Carlo draws at seed 4,
+`exuber::datestamp()` for 95% episodes, and `cpm::processStream()` with the
+Kolmogorov-Smirnov statistic on monthly log returns. Endpoint-specific BSADF
+critical values are exported. Monthly ARL0 is 500; weekly ARL0 is 5,000.
+Startup is 20% of each block, with a floor of 20 observations. This adjustment
+and the explicit Monte Carlo critical values are documented in Methodology.txt.
+
+```{r detection, eval=params$regenerate}
+run_detection(data)
+```
+
+```{r recursive-tests}
+tests <- read_table("Results/psy_test_summary.csv")
+knitr::kable(tests[tests$test == "GSADF", c("asset_id", "observations", "min_window", "statistic", "critical_95", "reject_95")], digits = 4)
+```
+
+```{r episodes}
+knitr::kable(read_table("Results/psy_euphoric_episodes.csv"))
+```
+
+```{r change-points}
+knitr::kable(read_table("Results/ks_cpm_change_points.csv"))
+```
+
+```{r detection-figures, echo=FALSE, out.width="100%"}
+knitr::include_graphics(list.files("Figures", pattern = "_detection[.]png$", full.names = TRUE))
+```
+
+KS distribution changes are statistical regimes. The paper's green-energy phase
+labels are not transferred to fan tokens. BSADF euphoric episodes are distinct
+from complete formation, burst, and decline cycles.
+
+# Propagation phase
+
+The available-data adaptation uses token, BTC, and CHZ price levels with
+`urca::ca.jo(type="trace", K=2, ecdet="none", spec="longrun")`. VECMs are fitted
+using `urca::cajorls()` only when the 5% sequential trace rule selects an
+intermediate rank. Unit-root diagnostics are supplied. A p=1 VAR and package
+Granger F-tests summarize benchmark predictability. These results concern a
+different variable system from the paper's FSI/oil system and cannot support
+its financial-stress conclusion.
+
+```{r propagation, eval=params$regenerate}
+run_propagation(data)
+```
+
+```{r johansen}
+knitr::kable(read_table("Results/benchmark_johansen_trace.csv"), digits = 4)
+```
+
+No fan-token Google Trends data or financial-stress series was supplied. Their
+status is recorded in `Results/paper_extension_status.csv`. Original green-energy search
+data remain in Original-paper as reference material, not fan-token sentiment.
+
+# Forecasting phase
+
+The expanding-window exercise predicts one monthly observation at a time.
+`forecast::auto.arima(seasonal=FALSE)` and the original BSTS state specification
+are used. BSTS has 1,000 MCMC draws, seed 9, and 10% suggested burn-in. Holdout
+length is at most the paper's 37 months; each series retains at least 36 training
+months because the fan-token histories are shorter than the paper's sample.
+
+The code also implements ARIMAX if an actual, complete fan-token search-interest
+input is later supplied. Current results contain the two available univariate
+baselines. The current-interest ARIMAX model is a conditional nowcast; it is not
+a forecast available before target-month search interest is observed.
+
+```{r forecasts, eval=params$regenerate}
+run_forecasting(data)
+```
+
+```{r forecast-tables}
+knitr::kable(read_table("Results/forecast_accuracy.csv"), digits = 4)
+```
+
+Metrics are reported on both log-price and USD-price scales. Exponentiated
+log-point predictions are labeled median price forecasts. Diebold-Mariano tests
+use `multDM::DM.test()` and squared error; per-token model confidence sets use
+`MCS::MCSprocedure(alpha=0.15, B=5000, statistic="TR")`. Without search-interest
+data, the comparison set contains ARIMA and BSTS. No superiority of an unavailable
+ARIMAX model is asserted.
+
+```{r forecast-figures, echo=FALSE, out.width="100%"}
+knitr::include_graphics(list.files("Figures", pattern = "_forecasts[.]png$", full.names = TRUE))
+```
+
+# Validation and reported results
+
+```{r validate, eval=params$regenerate}
+source("validate_paper_extensions.R")
+write_report(data, started)
+```
+
+```{r report, echo=FALSE, results='asis'}
+cat("```text\n", paste(readLines("Results/Paper-extensions-summary.txt"), collapse="\n"), "\n```\n", sep="")
+```
+
+# Simulation appendix
+
+The paper's original eGARCH bubble-generation and 1,000-replication simulation
+code is retained, unmodified, in `../Original-paper/Code-and-Data/Code.Rmd`.
+Those simulations assess the original paper's methods; they are not empirical
+fan-token observations and are not counted among this project's results.
+
+# Session
+
+```{r session}
+sessionInfo()
+```

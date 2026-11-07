@@ -1,0 +1,10 @@
+section,status,detail
+Daily data reconstruction,COMPLETED,Rebuilt from archived provider JSON using R
+Monthly exuber RADF/BSADF,COMPLETED,Price levels and package Monte Carlo critical sequences
+Monthly KS-CPM,COMPLETED,Nonparametric sequential distribution-change model
+Weekly KS-CPM robustness,COMPLETED,Weekly mean prices with ARL0=5000
+Benchmark Johansen/VECM and VAR,COMPLETED,Optional token/BTC/CHZ system
+Expanding-window ARIMA and BSTS,COMPLETED,Optional paper forecasting specification
+Search-interest ARIMAX and density comparison,UNAVAILABLE_INPUT,Optional full-paper scope only; not required for submitted project
+Financial-stress propagation,UNAVAILABLE_INPUT,Optional full-paper scope only; not required for submitted project
+Paper simulation appendix,ORIGINAL_CODE_AND_DATA_INCLUDED,Original code and data preserved without rerunning appendix
